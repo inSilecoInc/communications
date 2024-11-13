@@ -1,7 +1,7 @@
 ---
 title: "Timing Windows"
-author: "Kevin Cazelles & David Beauchesne"
-date: "2024-10-07"
+author: "Kevin Cazelles, David Beauchesne & Kevin McCann"
+date: "2024-11-15"
 format: 
   revealjs:
     theme: serif
@@ -23,9 +23,18 @@ format:
   <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="100"></div>
   <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="100"></div>
 </div>
-**Kevin Cazelles & David Beauchesne**
+**Kevin Cazelles, David Beauchesne & Kevin McCann**
 
-*2024-10-07*
+*2024-11-15*
+:::
+
+
+---
+
+## [inSileco](https://insileco.io/){target="_blank"}
+
+::: {style="text-align: center;"}
+[![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
 :::
 
 
@@ -108,15 +117,6 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 
 <!-- [***Diagram***](https://insileco.atlassian.net/wiki/spaces/CON/whiteboard/225673217){target="_blank"} -->
 :::
-
----
-
-## Timing Windows Calculator
-
-***Live demo***
-
-
-
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
@@ -228,6 +228,10 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 
 ::::
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# [*Live demo*](https://insileco.shinyapps.io/timingWindowsCalculator/){target="_blank"}
+:::
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -239,65 +243,14 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 
 ## Conceptual Developments
 
-1. Effect of perturbations on a stage-structured spatial foodweb
-2. Assessing optimal timing windows for freshwater interventions through a cumulative risk framework 
+1. Assessing optimal timing windows for freshwater interventions through a cumulative risk framework 
+2. Effect of perturbations on a stage-structured spatial foodweb
 
 . . .
 
 *Strategy:*
 
 - Initiate work and reflections on the next steps following project completion, assuming that there is interest to continue developing how timing windows are assessed for environmental impact assessments
-
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-::: {style="text-align: center;"}
-![](img/concept_fw.svg)
-:::
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-::: {style="text-align: center;"}
-![](img/concept_fw_full.svg)
-:::
-
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-::: {style="text-align: center;"}
-![](img/concept_fw_full1.svg)
-:::
-
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-::: {style="text-align: center;"}
-![](img/concept_fw_full2.svg)
-:::
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-
-::: {style="font-size: 80%;"}
-**Anticipated benefits**
-
-- Undertanding of disturbance spread to other:
-  - life stages 
-  - species
-- Integration of concepts to timing windows assessment
-- Improved assessment of timing windows at the scale of ecosystems
-
-:::
 
 
 ---
@@ -390,6 +343,57 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 - Integration with cumulative framework
 - Spatially explicit assessment
 :::
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw.svg){width=90%}
+:::
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full.svg){width=90%}
+:::
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full1.svg){width=90%}
+:::
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full2.svg){width=90%}
+:::
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+
+::: {style="font-size: 80%;"}
+**Anticipated benefits**
+
+- Integrating food webs to timing windows assessment
+- Understanding how disturbance spread to other:
+  - life stages 
+  - species
+- Improved assessment of timing windows at the scale of ecosystems
+
+:::
+
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}

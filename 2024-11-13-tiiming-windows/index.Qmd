@@ -1,0 +1,398 @@
+---
+title: "Timing Windows"
+author: "Kevin Cazelles & David Beauchesne"
+date: "2024-10-07"
+format: 
+  revealjs:
+    theme: serif
+    slide-number: true
+    transition: fade
+    css: styles.css
+    incremental: false
+    toc: false
+    toc-depth: 2
+---
+
+::: {style="text-align: center;"}
+# Timing Windows
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div><img src="../img/hex-TWC.png" width="150"></div>
+</div>
+<br>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin-left: 0px;"><img src="../img/insileco_logo256.png" width="100"></div>
+  <div style="margin-left: 200px;"><img src="../img/logo_cfem2.png" width="100"></div>
+</div>
+**Kevin Cazelles & David Beauchesne**
+
+*2024-10-07*
+:::
+
+
+---
+
+## Context & Deliverables
+
+::: {style="font-size: 90%;"}
+
+The Timing Windows Calculator will assess the risk of WUAs on fish and habitats and propose optimized timing windows for *in situ* interventions that minimize ecological risks. 
+
+:::
+
+<br> 
+
+. . .
+
+### Deliverables:
+
+::: {style="font-size: 90%;"}
+
+1. Fish and fish prey timing window database.
+2. Statistical models and risk analysis for future users.
+3. Timing Windows shiny app calculator for management and policy decisions.
+
+:::
+
+---
+
+## Today's meeting
+
+*Goal: detail our plan and progress and get feedback on the approach and user interface*
+
+<br> 
+
+. . . 
+
+### Plan
+
+1. Timing Windows Calculator
+2. Data Science & Engineering
+3. Conceptual Developments
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Timing Windows Calculator
+:::
+
+---
+
+## Timing Windows Calculator
+
+*Risk Management Approach*
+
+::: {style="font-size: 80%;"}
+
+- **Establish Context**: Define the environmental context for each lake or river.
+- **Identify Risks**: Identify risks to fish life processes and habitats based on WUA pressures.
+- **Analyze Risks**: Analyze the risks based on available data and local species life processes.
+- **Evaluate Risks**: Evaluate the impact of risks on fish populations and habitats.
+- **Treat Risks**: Propose timing windows as mitigation measures to reduce exposure and vulnerability.
+
+:::
+
+
+---
+
+## Timing Windows Calculator
+
+*Application*
+
+::: {style="font-size: 80%;"}
+1. Waterbody selection
+1. Species selection
+1. WUA selection
+2. Timing windows calculation
+3. Risk assessment output
+4. Timing windows proposal
+
+<!-- [***Diagram***](https://insileco.atlassian.net/wiki/spaces/CON/whiteboard/225673217){target="_blank"} -->
+:::
+
+---
+
+## Timing Windows Calculator
+
+***Live demo***
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Data Science & Engineering
+:::
+
+---
+
+## Data Science & Engineering
+
+*Data-driven assessments*
+
+<br>
+
+::: {style="text-align: center;"}
+![](../img/tiered_approach2.png)
+:::
+
+---
+
+## Data Science & Engineering
+
+*National dataset for Timing Windows assessments*
+
+:::: {columns}
+
+::: {.column width="25%"}
+*Data tables:*
+
+::: {style="font-size: 80%;"}
+- Waterbodies
+- Species
+- Life processes
+- Interactions
+- Traits
+- WUA
+- Stressors
+:::
+
+:::
+
+::: {.column width="72%"}
+
+::: {style="text-align: center;"}
+![](../img/diagram_db.png){width=100%}
+:::
+
+:::
+
+::::
+
+
+---
+
+## Data Science & Engineering
+
+*Harvesting and integration*
+
+::: {style="font-size: 80%;"}
+1. Harvest open data at national/global scale
+2. Harvest *in situ* data
+3. Gap-fil missing knowledge
+4. Construct National Timing Windows Database
+   1. Large-scale data
+   2. Modeling data 
+   3. Empirical data
+
+<!-- [***Diagram***](https://insileco.atlassian.net/wiki/spaces/CON/whiteboard/225673217){target="_blank"} -->
+:::
+
+---
+
+## Data Science & Engineering
+
+*Practical workplan*
+
+:::: {columns}
+
+::: {.column width="54%"}
+
+::: {style="font-size: 70%;"}
+- Waterbodies {{< fa gears >}} [{{< fa globe >}}](https://open.canada.ca/data/en/dataset/e9931fc7-034c-52ad-91c5-6c64d4ba0065){target="_blank"} 
+  - Physico-chemical properties {{< fa gears >}}
+- Species
+  - Master list (226 species) {{< fa gears >}} [{{< fa globe >}}](https://www.fishbase.se/country/CountryChecklist.php?what=list&trpp=50&c_code=124&csub_code=&cpresence=present&sortby=alpha2&vhabitat=fresh){target="_blank"}
+  - Target list (~30 species) {{< fa hand >}}
+  - Occurrences (GBIF; ~400 000) {{< fa gears >}} [{{< fa globe >}}](https://www.gbif.org/){target="_blank"}
+  - Traits (including life processes) 
+    - FishBase {{< fa gears >}} {{< fa hand >}} [{{< fa globe >}}](https://www.fishbase.se/search.php){target="_blank"}
+    - Litterature {{< fa hand >}}{{< fa book >}}
+:::
+
+:::
+
+::: {.column width="45%"}
+
+::: {style="font-size: 70%;"}
+- Lake-specific ecological data
+  - Habitats {{< fa gears >}}
+  - Life processes {{< fa hand >}}{{< fa book >}}
+- WUA
+  - WUA / stressors data {{< fa hand >}}{{< fa book >}}
+- Sensitivity
+  - species / stressors data {{< fa hand >}}{{< fa book >}}
+- Legislation for status quo {{< fa gears >}} {{< fa hand >}} [{{< fa globe >}}](https://www.dfo-mpo.gc.ca/pnw-ppe/timing-periodes/index-eng.html){target="_blank"}
+:::
+
+:::
+
+::::
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Conceptual Developments
+:::
+
+---
+
+## Conceptual Developments
+
+1. Effect of perturbations on a stage-structured spatial foodweb
+2. Assessing optimal timing windows for freshwater interventions through a cumulative risk framework 
+
+. . .
+
+*Strategy:*
+
+- Initiate work and reflections on the next steps following project completion, assuming that there is interest to continue developing how timing windows are assessed for environmental impact assessments
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](../img/concept_fw.svg)
+:::
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](../img/concept_fw_full.svg)
+:::
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](../img/concept_fw_full1.svg)
+:::
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](../img/concept_fw_full2.svg)
+:::
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+
+::: {style="font-size: 80%;"}
+**Anticipated benefits**
+
+- Undertanding of disturbance spread to other:
+  - life stages 
+  - species
+- Integration of concepts to timing windows assessment
+- Improved assessment of timing windows at the scale of ecosystems
+
+:::
+
+
+---
+
+### Timing windows & cumulative risk
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
+- Waterbody ($W_x$)
+- Species ($Sp_i$)
+- Stressors ($St_j$) 
+- Sensitivity ($\mu_{i,j}$)
+:::
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+$$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
+
+:::
+
+::::
+
+::: {style="font-size: 80%;"}
+**To consider:**
+
+- Time
+- Life processes
+- Habitat sensitivity
+:::
+
+---
+
+### Timing windows & cumulative risk
+
+::: {style="text-align: center;"}
+![](../img/calculator_1.svg){width=58%}
+:::
+
+---
+
+### Timing windows & cumulative risk
+
+::: {style="text-align: center;"}
+![](../img/calculator_2.svg){width=58%}
+:::
+
+---
+
+### Timing windows & cumulative risk
+
+::: {style="text-align: center;"}
+![](../img/calculator_3.svg){width=58%}
+:::
+
+---
+
+### Timing windows & cumulative risk
+
+::: {style="text-align: center;"}
+![](../img/calculator_4.svg){width=58%}
+:::
+
+---
+
+### Timing windows & cumulative risk
+
+::: {style="text-align: center;"}
+![](../img/calculator_5.svg){width=58%}
+:::
+
+
+---
+
+### Timing windows & cumulative risk
+
+
+::: {style="font-size: 80%;"}
+**Anticipated benefits**
+
+- Flexible
+- Modular
+- Data quality (low / high)
+- Data type (binary / continuous / spatial)
+- Integration with cumulative framework
+- Spatially explicit assessment
+:::
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Thank you!
+:::
+

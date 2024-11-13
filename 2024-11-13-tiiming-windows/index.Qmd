@@ -16,12 +16,12 @@ format:
 ::: {style="text-align: center;"}
 # Timing Windows
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div><img src="../img/hex-TWC.png" width="150"></div>
+  <div><img src="img/hex-TWC.png" width="150"></div>
 </div>
 <br>
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div style="margin-left: 0px;"><img src="../img/insileco_logo256.png" width="100"></div>
-  <div style="margin-left: 200px;"><img src="../img/logo_cfem2.png" width="100"></div>
+  <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="100"></div>
+  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="100"></div>
 </div>
 **Kevin Cazelles & David Beauchesne**
 
@@ -132,7 +132,7 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 <br>
 
 ::: {style="text-align: center;"}
-![](../img/tiered_approach2.png)
+![](img/tiered_approach2.png)
 :::
 
 ---
@@ -161,7 +161,7 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 ::: {.column width="72%"}
 
 ::: {style="text-align: center;"}
-![](../img/diagram_db.png){width=100%}
+![](img/diagram_db.png){width=100%}
 :::
 
 :::
@@ -254,7 +254,7 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 ### Perturbations on stage-structured spatial foodwebs
 
 ::: {style="text-align: center;"}
-![](../img/concept_fw.svg)
+![](img/concept_fw.svg)
 :::
 
 ---
@@ -262,16 +262,7 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 ### Perturbations on stage-structured spatial foodwebs
 
 ::: {style="text-align: center;"}
-![](../img/concept_fw_full.svg)
-:::
-
-
----
-
-### Perturbations on stage-structured spatial foodwebs
-
-::: {style="text-align: center;"}
-![](../img/concept_fw_full1.svg)
+![](img/concept_fw_full.svg)
 :::
 
 
@@ -280,7 +271,16 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 ### Perturbations on stage-structured spatial foodwebs
 
 ::: {style="text-align: center;"}
-![](../img/concept_fw_full2.svg)
+![](img/concept_fw_full1.svg)
+:::
+
+
+---
+
+### Perturbations on stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full2.svg)
 :::
 
 ---
@@ -339,7 +339,7 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 ### Timing windows & cumulative risk
 
 ::: {style="text-align: center;"}
-![](../img/calculator_1.svg){width=58%}
+![](img/calculator_1.svg){width=58%}
 :::
 
 ---
@@ -347,7 +347,7 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 ### Timing windows & cumulative risk
 
 ::: {style="text-align: center;"}
-![](../img/calculator_2.svg){width=58%}
+![](img/calculator_2.svg){width=58%}
 :::
 
 ---
@@ -355,7 +355,7 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 ### Timing windows & cumulative risk
 
 ::: {style="text-align: center;"}
-![](../img/calculator_3.svg){width=58%}
+![](img/calculator_3.svg){width=58%}
 :::
 
 ---
@@ -363,7 +363,7 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 ### Timing windows & cumulative risk
 
 ::: {style="text-align: center;"}
-![](../img/calculator_4.svg){width=58%}
+![](img/calculator_4.svg){width=58%}
 :::
 
 ---
@@ -371,7 +371,7 @@ $$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
 ### Timing windows & cumulative risk
 
 ::: {style="text-align: center;"}
-![](../img/calculator_5.svg){width=58%}
+![](img/calculator_5.svg){width=58%}
 :::
 
 

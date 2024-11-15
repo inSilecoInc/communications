@@ -109,18 +109,6 @@ format:
 
 ---
 
-## Deliverables:
-
-::: {style="font-size: 90%;"}
-
-1. Fish and fish prey timing window database.
-2. Statistical models and risk analysis for future users.
-3. Timing Windows shiny app calculator for management and policy decisions.
-
-:::
-
----
-
 ## Today's meeting
 
 *Goal: detail our plan and progress and get feedback on the approach and user interface*

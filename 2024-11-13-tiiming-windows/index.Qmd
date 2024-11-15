@@ -1,7 +1,8 @@
 ---
-title: "Timing Windows"
+title: "Timing Windows Calculator"
 author: "Kevin Cazelles, David Beauchesne & Kevin McCann"
 date: "2024-11-15"
+from: markdown+emoji
 format: 
   revealjs:
     theme: serif
@@ -16,12 +17,11 @@ format:
 ::: {style="text-align: center;"}
 # Timing Windows
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div><img src="img/hex-TWC.png" width="150"></div>
+  <div><img src="img/hex-TWC.png" width="160"></div>
 </div>
-<br>
 <div style="display: flex; justify-content: center; align-items: center;">
-  <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="100"></div>
-  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="100"></div>
+  <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="130"></div>
+  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="130"></div>
 </div>
 **Kevin Cazelles, David Beauchesne & Kevin McCann**
 
@@ -40,19 +40,76 @@ format:
 
 ---
 
-## Context & Deliverables
+## Context
 
-::: {style="font-size: 90%;"}
-
-The Timing Windows Calculator will assess the risk of WUAs on fish and habitats and propose optimized timing windows for *in situ* interventions that minimize ecological risks. 
+:::: {.columns}
 
 :::
 
-<br> 
+::: {.column width="59%"}
 
-. . .
+#### Timing windows are
 
-### Deliverables:
+* mitigation measures
+* highly variable in Canada
+* designed for one or more species
+* based on: 
+  - timing of life processes
+  - vulnerability to WUA 
+  - environmental conditions
+
+:::
+
+::: {.column width="40%"}
+
+::: {style="text-align: center; margin-top: 100px"}
+![](img/timingwindow.png){width=100%}
+:::
+
+::: {style="font-size: 80%;"}
+
+<!-- - :book: [*Science advice on the use of timing windows as a mitigation measure*](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf), CSAS SAR 2022/047.
+- :book: Tuney et al. [*Science on the use of timing windows as a mitigation measure*](https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf) CSAS RD 2022/081 -->
+
+- :book: [CSAS RD 2022/081](https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf)
+- :book: [CSAS SAR 2022/047](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf)
+
+:::
+
+::::
+
+
+---
+
+## Context
+
+#### Timing windows must be
+
+* conceptually extended to include spatio-temporal data
+* conceptually extended to support stage-structured data
+* conceptually extended to community / food webs
+* computed transparently with a consistent and robust risk assessment framework based on past and recent data
+* highly adaptable 
+
+
+---
+
+## Context
+
+::: {style="font-size: 90%;"}
+
+- We propose to extend the conceptual framework and to design a **Timing Windows Calculator**
+
+- The Timing Windows Calculator will assess the risk of WUAs on fish and habitats and propose optimized timing windows for *in situ* interventions that minimize ecological risks.
+
+- The Timing Windows Calculator could be a vaulable tool to FFHPP regulatory review biologist.
+
+:::
+
+
+---
+
+## Deliverables:
 
 ::: {style="font-size: 90%;"}
 
@@ -230,7 +287,7 @@ The Timing Windows Calculator will assess the risk of WUAs on fish and habitats 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
-# [*Live demo*](https://insileco.shinyapps.io/timingWindowsCalculator/){target="_blank"}
+# [*Live demo*](https://insileco.shinyapps.io/timingwindowscalculator/){target="_blank"}
 :::
 
 

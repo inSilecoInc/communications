@@ -14,7 +14,7 @@
 
   <meta name="author" content="Kevin Cazelles, David Beauchesne &amp; Kevin McCann">
   <meta name="dcterms.date" content="2024-11-15">
-  <title>Timing Windows</title>
+  <title>Timing Windows Calculator</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -330,7 +330,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Timing Windows</h1>
+  <h1 class="title">Timing Windows Calculator</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -346,16 +346,15 @@ Kevin Cazelles, David Beauchesne &amp; Kevin McCann
 <h1>Timing Windows</h1>
 <div style="display: flex; justify-content: center; align-items: center;">
 <div>
-<img src="img/hex-TWC.png" width="150">
+<img src="img/hex-TWC.png" width="160">
 </div>
 </div>
-<br>
 <div style="display: flex; justify-content: center; align-items: center;">
 <div style="margin-left: 0px;">
-<img src="img/insileco_logo256.png" width="100">
+<img src="img/insileco_logo256.png" width="130">
 </div>
 <div style="margin-left: 200px;">
-<img src="img/logo_cfem2.png" width="100">
+<img src="img/logo_cfem2.png" width="130">
 </div>
 </div>
 <p><strong>Kevin Cazelles, David Beauchesne &amp; Kevin McCann</strong></p>
@@ -368,21 +367,68 @@ Kevin Cazelles, David Beauchesne &amp; Kevin McCann
 <p><a href="https://insileco.io/" target="_blank"><img data-src="img/insileco.png" style="width:80.0%"></a></p>
 </div>
 </section>
-<section id="context-deliverables" class="slide level2">
-<h2>Context &amp; Deliverables</h2>
-<div style="font-size: 90%;">
-<p>The Timing Windows Calculator will assess the risk of WUAs on fish and habitats and propose optimized timing windows for <em>in situ</em> interventions that minimize ecological risks.</p>
+<section id="context" class="slide level2">
+<h2>Context</h2>
+<div class="columns">
+
 </div>
-<p><br></p>
-<div class="fragment">
-<h3 id="deliverables">Deliverables:</h3>
+<div class="column" style="width:59%;">
+<h4 id="timing-windows-are">Timing windows are</h4>
+<ul>
+<li>mitigation measures</li>
+<li>highly variable in Canada</li>
+<li>designed for one or more species</li>
+<li>based on:
+<ul>
+<li>timing of life processes</li>
+<li>vulnerability to WUA</li>
+<li>environmental conditions</li>
+</ul></li>
+</ul>
+</div>
+<div class="column" style="width:40%;">
+<div style="text-align: center; margin-top: 100px">
+<p><img data-src="img/timingwindow.png" style="width:100.0%"></p>
+</div>
+<div style="font-size: 80%;">
+<!-- - :book: [*Science advice on the use of timing windows as a mitigation measure*](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf), CSAS SAR 2022/047.
+- :book: Tuney et al. [*Science on the use of timing windows as a mitigation measure*](https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf) CSAS RD 2022/081 -->
+<ul>
+<li><span class="emoji" data-emoji="book">📖</span> <a href="https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf">CSAS RD 2022/081</a></li>
+<li><span class="emoji" data-emoji="book">📖</span> <a href="https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf">CSAS SAR 2022/047</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="context-1" class="slide level2">
+<h2>Context</h2>
+<h4 id="timing-windows-must-be">Timing windows must be</h4>
+<ul>
+<li>conceptually extended to include spatio-temporal data</li>
+<li>conceptually extended to support stage-structured data</li>
+<li>conceptually extended to community / food webs</li>
+<li>computed transparently with a consistent and robust risk assessment framework based on past and recent data</li>
+<li>highly adaptable</li>
+</ul>
+</section>
+<section id="context-2" class="slide level2">
+<h2>Context</h2>
+<div style="font-size: 90%;">
+<ul>
+<li><p>We propose to extend the conceptual framework and to design a <strong>Timing Windows Calculator</strong></p></li>
+<li><p>The Timing Windows Calculator will assess the risk of WUAs on fish and habitats and propose optimized timing windows for <em>in situ</em> interventions that minimize ecological risks.</p></li>
+<li><p>The Timing Windows Calculator could be a vaulable tool to FFHPP regulatory review biologist.</p></li>
+</ul>
+</div>
+</section>
+<section id="deliverables" class="slide level2">
+<h2>Deliverables:</h2>
 <div style="font-size: 90%;">
 <ol type="1">
 <li>Fish and fish prey timing window database.</li>
 <li>Statistical models and risk analysis for future users.</li>
 <li>Timing Windows shiny app calculator for management and policy decisions.</li>
 </ol>
-</div>
 </div>
 </section>
 <section id="todays-meeting" class="slide level2">
@@ -538,7 +584,7 @@ Kevin Cazelles, David Beauchesne &amp; Kevin McCann
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section>
 <section id="live-demo" class="title-slide slide level1 center" data-background-color="#000000" style="text-align: center;">
-<h1><a href="https://insileco.shinyapps.io/timingWindowsCalculator/" target="_blank"><em>Live demo</em></a></h1>
+<h1><a href="https://insileco.shinyapps.io/timingwindowscalculator/" target="_blank"><em>Live demo</em></a></h1>
 
 </section>
 

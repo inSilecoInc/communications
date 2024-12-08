@@ -41,8 +41,6 @@ format:
 
 
 
-
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
 # Shiny App: idealised version vs MVP
@@ -87,6 +85,282 @@ format:
 
 
 
+--- 
+
+## Insights from litterature
+
+
+:::: {columns}
+
+::: {.column width="55%"}
+
+::: {style="text-align: center;"}
+![](img/kefi_perturb.png){width=80%}
+:::
+
+:::
+
+
+::: {.column width="44%"}
+
+::: {style="font-size: 60%;"}
+
+- :book: Kéfi S, et al. 2019. Advancing our understanding of ecological stability. Ecology Letters 22:1349–1356. DOI: 10.1111/ele.13340.
+
+:::
+
+:::
+
+::::
+
+
+
+--- 
+
+## Insights from litterature
+
+- Multiple perturbations understudied 
+
+  > Although multiple types of disturbances acting simultaneously are a defining feature of global environmental change (e.g. Millennium Ecosystem Assessment 2005; Piggott et al. 2015), this has been largely neglected since **studies typically study a system’s response to one or two perturbations** (**1.4 perturbations studied per paper on average** [...])
+
+::: {style="font-size: 60%;"}
+- :book: Kéfi S, et al. 2019. Advancing our understanding of ecological stability. Ecology Letters 22:1349–1356. DOI: 10.1111/ele.13340.
+
+:::
+
+
+--- 
+
+## Insights from litterature
+
+- Characteristics of the perbabtion is understudied
+  - importance of perturbation duration: 
+      - :book: Ratajczak Z, et al. 2017. The interactive effects of press/pulse intensity and duration on regime shifts at multiple scales. Ecological Monographs 87:198–218. DOI: 10.1002/ecm.1249.
+
+
+::: {style="font-size: 60%;"}
+
+- :book: Kéfi S, et al. 2019. Advancing our understanding of ecological stability. Ecology Letters 22:1349–1356. DOI: 10.1111/ele.13340.
+
+:::
+
+
+--- 
+
+## Insights from litterature
+
+- Better understanding on the role of species.
+
+> abundant species tend to govern the short-term recovery, while rare species often dominate the long-term recovery. 
+
+
+::: {style="font-size: 60%;"}
+
+- :book: Arnoldi J-F, et al., 2018. How ecosystems recover from pulse perturbations: A theory of short- to long-term responses. Journal of Theoretical Biology 436:79–92. DOI: 10.1016/j.jtbi.2017.10.003.
+
+:::
+
+
+--- 
+
+## Insights from litterature
+
+- Opportunities to study **structured perturbations** (McCann)
+
+- Structure: 
+  - Spatial : nearshore/offshore
+  - Temporal: winter/spring
+  - Life stage: juvenile/adult
+  - Combinations of the abvementionned
+
+
+---
+
+## Stage-structured food-webs
+
+
+::: {style="font-size: 70%;"}
+
+- :book: Caskenette AL, McCann KS. 2017. Biomass Reallocation between Juveniles and Adults Mediates Food Web Stability by Distributing Energy Away from Strong Interactions. PLOS ONE. 10.1371/journal.pone.0170725.
+- :book: Mougi A. 2017. Persistence of a stage-structured food-web. Scientific Reports. 10.1038/s41598-017-11686-z.
+- :book: de Roos AM. 2021. Dynamic population stage structure due to juvenile–adult asymmetry stabilizes complex ecological communities. Proceedings of the National Academy of Sciences. 10.1073/pnas.2023709118.
+- :book: Barbier M, Loreau M. 2019. Pyramids and cascades: a synthesis of food chain functioning and stability. Ecology Letters. 10.1111/ele.13196.
+  - allometric + gradient of self regulation
+  - :book: Quévreux P, Barbier M, Loreau M. 2021. Synchrony and Perturbation Transmission in Trophic Metacommunities. The American Naturalist. 10.1086/714131.
+
+
+:::
+
+
+---
+
+## Stage-structured food-webs
+
+
+:::: {columns}
+
+::: {.column width="59%"}
+
+::: {style="text-align: center;"}
+![](./img/caskenette.png){width=95%}
+:::
+
+:::
+
+
+::: {.column width="40%"}
+
+::: {style="font-size: 70%;"}
+
+- Self regulation + FR type II
+- PA add PJ have non overlapping niche, Biomass Reallocation
+- Simple enough, a good start.
+- Straightforward to weight the importance of stage structured
+
+:::
+
+:::
+
+::::
+
+
+::: {style="font-size: 60%;"}
+
+- :book: Caskenette AL, McCann KS. 2017. Biomass Reallocation between Juveniles and Adults Mediates Food Web Stability by Distributing Energy Away from Strong Interactions. PLOS ONE. 10.1371/journal.pone.0170725.
+
+:::
+
+
+---
+
+## Stage-structured food-webs
+
+:::: {columns}
+
+::: {.column width="59%"}
+
+::: {style="text-align: center;"}
+![](./img/mougi.png){width=95%}
+:::
+
+:::
+
+
+::: {.column width="40%"}
+
+::: {style="font-size: 70%;"}
+
+- Self regulation + FR type I
+- random foodwebs, random niche overlap, random ontogenic niche shift
+- Generalized 
+
+
+:::
+
+:::
+
+::::
+
+
+::: {style="font-size: 70%;"}
+
+- :book: Mougi A. 2017. Persistence of a stage-structured food-web. Scientific Reports. 10.1038/s41598-017-11686-z.
+
+:::
+
+
+
+---
+
+## Stage-structured food-webs
+
+:::: {columns}
+
+::: {.column width="59%"}
+
+::: {style="text-align: center;"}
+![](./img/deroos.png){width=95%}
+:::
+
+:::
+
+
+::: {.column width="40%"}
+
+::: {style="font-size: 70%;"}
+
+
+- PA add PJ have overlapping niche (same prey, same pred)
+- asymmetry between juveniles and adults
+  - in foraging
+  - in vulnerability to predation
+- maturation and reproduction stop when food availability drops when basic maintenance costs not covered
+- Generalized (niche model-ish foodwebs)
+- Life-stage structured self regulation
+
+
+:::
+
+:::
+
+::::
+
+
+::: {style="font-size: 70%;"}
+
+- :book: :book: de Roos AM. 2021. Dynamic population stage structure due to juvenile–adult asymmetry stabilizes complex ecological communities. Proceedings of the National Academy of Sciences. 10.1073/pnas.2023709118.
+
+:::
+
+
+
+---
+
+## First step 
+
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full2.svg){width=90%}
+:::
+
+
+---
+
+## First step 
+
+
+:::: {columns}
+
+::: {.column width="59%"}
+
+::: {style="text-align: center;"}
+![](img/concept_fw.svg){width=95%}
+:::
+
+:::
+
+
+::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
+
+
+- spatially structured perturbations 
+- temporaly structured perturbations 
+  - forcing function for reproductive param
+
+
+:::
+
+:::
+
+::::
+
+
+
+
+
+
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
@@ -99,6 +373,9 @@ format:
 ::: {style="text-align: center;"}
 ![](img/calculator_full.svg){width=60%}
 :::
+
+
+
 
 
 
@@ -120,12 +397,16 @@ format:
 
 
 
+
+
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
 # Alliance grant
 :::
 
 ## Is there something we could work on via the Alliance? 
+
+
 
 
 

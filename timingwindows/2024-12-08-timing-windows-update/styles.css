@@ -1,0 +1,17 @@
+/* styles.css */
+.title-slide {
+  text-align: center;
+}
+
+.title-slide .logos {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.title-slide .logos img {
+  margin: 20px;
+  width: 100px;
+  /* Adjust as needed */
+  height: auto;
+}

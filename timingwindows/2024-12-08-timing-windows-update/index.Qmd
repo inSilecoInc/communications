@@ -1,0 +1,136 @@
+---
+title: "Timing Windows"
+author: "Kevin Cazelles, David Beauchesne, Tyler Tunney & Kevin McCann"
+date: "2024-12-08"
+from: markdown+emoji
+format: 
+  revealjs:
+    theme: serif
+    slide-number: true
+    transition: fade
+    css: styles.css
+    incremental: false
+    toc: false
+    toc-depth: 2
+---
+
+
+
+## Agenda
+
+#### 1. Overall progress update (5 min)
+#### 2. Shiny App: idealised version vs MVP (1h)
+#### 3. Food webs and timing windows concepts (1h)
+#### 4. Risk calculator concepts (1h)
+#### 5. Grant application (15min)
+#### 6. Alliance grant (15min)
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Overall progress update
+:::
+
+## Update 
+
+- We had a good meeting with DFO last meeting 
+- We froze developement on the Shiny App
+- We hired someone to harvest data
+- We worked on the theoretical aspects of the contract 
+
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Shiny App: idealised version vs MVP
+:::
+
+## App is available online 
+
+- Shiny App working with mock data 
+- Good feedback
+- input from Jon Midwood (DFO)
+- Start thinking about real status-quo
+- https://insileco.shinyapps.io/timingwindowscalculator/
+
+
+
+## Questions / discussions
+
+- Priorities 
+  - Make in functional with mock data
+  - Running SDM 
+  - Attempting to have basic spawing model for a few species?
+      - Fishway use GDD to predict % of total run
+      - using telemetry data in the great lake? 
+      - telemetry data: 
+        - https://glatos.glos.us/portal
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Food webs and timing windows
+:::
+
+---
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full2.svg){width=90%}
+:::
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+#  Risk calculator concepts
+:::
+
+---
+
+
+::: {style="text-align: center;"}
+![](img/calculator_full.svg){width=60%}
+:::
+
+
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Grant application
+:::
+
+## What should we do next? 
+
+- Get data from DFO
+- Support for Climate change 
+- Work closely to Jon to do the modelling
+- Work on telemetry data
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Alliance grant
+:::
+
+## Is there something we could work on via the Alliance? 
+
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# End of the slides
+:::

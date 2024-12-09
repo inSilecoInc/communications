@@ -18,11 +18,11 @@ format:
 
 ## Agenda
 
-#### 1. Overall progress update (5 min)
+#### 1. Overall progress update (15 min)
 #### 2. Shiny App: idealised version vs MVP (1h)
 #### 3. Food webs and timing windows concepts (1h)
 #### 4. Risk calculator concepts (1h)
-#### 5. Grant application (15min)
+#### 5. Grant application (1h)
 #### 6. Alliance grant (15min)
 
 
@@ -33,8 +33,9 @@ format:
 
 ## Update 
 
-- We had a good meeting with DFO last meeting 
-- We froze developement on the Shiny App
+- Shiny updates
+- We had a good meeting with DFO
+- We froze developement on the Shiny App after the meeting with DFO
 - We hired someone to harvest data
 - We worked on the theoretical aspects of the contract 
 
@@ -46,27 +47,21 @@ format:
 # Shiny App: idealised version vs MVP
 :::
 
-## App is available online 
+## Updates 
 
+
+- Shiny App available online 
+  - https://insileco.shinyapps.io/timingwindowscalculator/
 - Shiny App working with mock data 
-- Good feedback
-- input from Jon Midwood (DFO)
-- Start thinking about real status-quo
-- https://insileco.shinyapps.io/timingwindowscalculator/
 
 
 
-## Questions / discussions
+## Discussions
 
-- Priorities 
-  - Make in functional with mock data
-  - Running SDM 
-  - Attempting to have basic spawing model for a few species?
-      - Fishway use GDD to predict % of total run
-      - using telemetry data in the great lake? 
-      - telemetry data: 
-        - https://glatos.glos.us/portal
+- :loudspeaker: Final list of features
 
+- Should we work towards an idealized version?
+- What should be the final list of the MVP.
 
 
 

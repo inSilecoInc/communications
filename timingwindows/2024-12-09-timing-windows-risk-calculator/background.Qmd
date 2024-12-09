@@ -1,0 +1,20 @@
+---
+title: Background
+---
+
+Cumulative effects assessments (CEAs) are critical tools for ecosystem-based management, enabling the evaluation of combined impacts from multiple stressors on ecosystems, habitats, and species. While CEAs are widely recognized for their importance, they often remain disconnected from practical decision-making processes, limiting their application in real-world environmental management scenarios (Stelzenmüller et al., 2018, 2020). Recent advancements in risk-based frameworks have sought to bridge this gap by integrating scientific findings into policy and operational tools. These frameworks emphasize evaluating both the likelihood and consequences of stressor impacts, allowing for targeted interventions and resource allocation (Bharadwaj et al., 2012; Wang et al., 2018).
+
+Risk-based approaches have been applied across sectors, including asset management (Tan & Ong, 2021), infrastructure maintenance (Otal & Bakulev, 2014), and environmental management (Stelzenmüller et al., 2018). In the context of ecosystem-based management, these approaches enable decision-makers to prioritize actions by assessing cumulative risks at multiple scales. For example, risk-based CEAs have been used to identify optimal timing windows for human activities (e.g., dredging, construction) (Suedel et al., 2008) and to guide conservation efforts in biodiversity hotspots (Pla et al., 2024). Multi-criteria decision-making techniques, such as those described by Karunathilake et al. (2020), further enhance these frameworks by addressing conflicting priorities and uncertainties in risk assessments.
+
+This project proposes a cumulative risk-based approach to optimize decision-making and interventions in natural systems, supporting two complementary objectives: 1) minimizing the risk of human interventions by identifying time periods and/or spatial locations where planned activities will have the least impact, and 2) maximizing the outcomes of management interventions by targeting areas or periods of heightened ecological risk. Unlike traditional CEAs, which often focus solely on spatial or temporal dimensions, this project expands the scope to include spatial, temporal, and spatio-temporal analyses. By enabling assessments to optimize space, time, or space-time windows, the framework offers unparalleled flexibility in addressing diverse management challenges. Building on advancements in risk-based CEAs and inspired by the foundational framework proposed by Halpern et al. (2008), this project extends cumulative risk mapping to support dynamic spatio-temporal analyses, positioning itself as a comprehensive tool for optimizing interventions in natural systems while advancing sustainable development and conservation goals.
+
+The specific objectives of this project are:
+
+1. **Operationalize Risk-Based CEAs**: Develop actionable tools that integrate cumulative risks into decision-making processes for natural systems.
+2. **Support Multi-Dimensional Analyses**: Enable assessments that optimize spatial, temporal, or spatio-temporal windows for interventions.
+3. **Minimize and Maximize Risk**:
+   - Minimize risk in the context of planned human activities to reduce environmental impacts.
+   - Maximize risk to identify ecological hotspots and prioritize management actions.
+4. **Leverage Open Data**: Utilize openly available datasets on stressors, species, life processes, and habitat sensitivities to ensure broad applicability.
+5. **Facilitate Adaptive Management**: Provide flexible tools for a range of ecosystems and intervention types, ensuring adaptability to changing conditions and data availability.
+

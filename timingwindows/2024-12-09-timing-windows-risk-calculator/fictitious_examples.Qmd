@@ -1,0 +1,37 @@
+---
+title: Fictitious examples
+---
+
+To illustrate the applicability of the cumulative risk-based approach to optimize human and management interventions, we present two fictitious examples. These examples highlight the flexibility of the framework, as it can be applied to diverse ecosystems and species while considering both human and natural stressors. The first example involves a freshwater stream with fish species, where we assess the impact of dredging and agricultural runoff on the life processes of three fish species. The second example focuses on the boreal forest, where the life processes of woodland caribou and moose are analyzed in the context of forestry activities and road disturbances. These examples provide a clear, practical demonstration of how the framework can be used to identify optimal timing and spatial windows for interventions that minimize risks to ecosystems and species.
+
+These two examples demonstrate how the cumulative risk-based approach can be applied to different ecosystems, each with unique species, life processes, and stressors. By assessing the impacts of human activities and natural disturbances, the framework enables the identification of optimal intervention windows that minimize risks to these species, while also highlighting critical areas for management action.
+
+## Freshwater Stream Example: Fish Species and Stressors
+
+In this example, we focus on a freshwater stream ecosystem, home to three fish species: lake trout (*Salvelinus namaycush*), yellow perch (*Perca flavescens*), and cisco (*Coregonus artedi*). These species are of significant ecological and economic importance. The selected life processes—spawning, natal, and rearing—are critical to their reproductive success and population stability.
+
+- **Lake Trout**: A top predator in the lake ecosystem, lake trout are sensitive to environmental changes. They are known to spawn in shallow, cold-water environments in the fall. The rearing process occurs in deeper waters, where juveniles grow before moving to adult habitats. Spawning habitat disruption due to sedimentation can severely impact the species' reproductive success.
+
+- **Yellow Perch**: This species is a key prey item for larger fish and is also commercially valuable. Yellow perch spawn in early spring, often in shallow areas of the stream. Their eggs and larvae are vulnerable to sedimentation, which can smother eggs and reduce larval survival. The rearing process, occurring in the stream’s vegetated areas, can also be affected by sedimentation and contaminants, particularly from agricultural runoff.
+
+- **Cisco**: Ciscoes are pelagic fish that play a significant role in the food web. They spawn in deep waters during the fall, and their juvenile rearing areas are in the upper layers of the water column. Cisco are particularly vulnerable to contaminants, as these substances can accumulate in their tissues, affecting both their health and the success of their offspring.
+
+**Stressors**:
+
+- **Sedimentation from Dredging**: Dredging activities in the stream disturb the riverbed, releasing fine sediments that can smother fish eggs, disrupt spawning grounds, and negatively impact water quality. Sedimentation also harms the rearing habitats for yellow perch and lake trout by reducing water clarity and oxygen levels.
+- **Contaminants from Agricultural Runoff**: Agricultural runoff, including pesticides and fertilizers, introduces toxic substances into the water, affecting species health and reproductive success. These contaminants, particularly nitrates and phosphates, can lead to eutrophication, reducing oxygen levels and impairing the development of fish larvae, especially for species like the yellow perch and cisco.
+
+## Boreal Forest Example: Woodland Caribou and Moose
+
+In the boreal forest example, we examine the impacts of forestry activities and road disturbances on woodland caribou (*Rangifer tarandus caribou*) and moose (*Alces alces*), two iconic species of the northern forests. Both species are sensitive to changes in their environment, particularly during their reproductive periods, and face multiple anthropogenic threats.
+
+- **Woodland Caribou**: This species is known for its wide-ranging migratory behavior and is highly dependent on mature, undisturbed forest habitats. The caribou’s **rut** occurs in the fall, a critical time for mating, while **calving** takes place in the spring. Both life processes are vulnerable to disturbances, particularly those related to habitat fragmentation and human encroachment.
+
+- **Moose**: Moose are another important species of the boreal forest. They also depend on large, undisturbed forest areas for both feeding and reproductive activities. During the **rut**, male moose become highly territorial, and their interactions with other moose are essential for breeding success. **Calving** occurs in the spring, and the health of the mother and calf depends on access to undisturbed areas rich in food resources.
+
+**Stressors**:
+
+- **Habitat Loss from Forestry Activities**: Logging operations lead to deforestation, fragmentation of habitats, and increased access to predators, all of which negatively impact both the woodland caribou and moose. The destruction of mature forests and the disturbance to calving grounds during the spring can lead to reduced reproductive success for both species.
+- **Disturbance from Roads**: Road construction and traffic can fragment the landscape, disturb migration routes, and increase the risk of predation. For caribou, roads can disrupt their migratory paths, particularly during the rut and calving periods. Moose are also affected, as roads increase the likelihood of vehicle collisions and can interfere with their access to feeding and calving areas.
+
+

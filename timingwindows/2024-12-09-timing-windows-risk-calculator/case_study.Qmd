@@ -1,0 +1,92 @@
+---
+title: Case study
+---
+
+## **Case Study: Simplified Application of the Risk Assessment Framework**
+
+To demonstrate the practical application of the cumulative risk-based approach, we present a simplified case study using real-life data. This case study highlights the capacity of the framework to evaluate cumulative risks in a specific ecosystem and identify optimal intervention windows, focusing on either temporal or spatial dimensions. While this example does not explore the full spatio-temporal capabilities of the framework, it provides a clear and actionable demonstration of its use with openly available datasets. 
+
+## Potential Ecosystems for the Case Study
+Below are suggestions for ecosystems with openly available data that may be suitable for this assessment:
+
+Here’s a revised bullet-point list with data sources for each of the **data requirements** (human activities/stressors, species, life processes, and sensitivity) for the proposed method. Each ecosystem includes suggestions for openly available datasets specific to these categories.
+
+---
+
+### **Potential Ecosystems and Data Sources**
+
+#### **Great Lakes Region**
+- **Human Activities/Stressors**:
+  - Pollution and invasive species: [Great Lakes Environmental Database (GLENDA)](https://www.epa.gov/great-lakes-monitoring/great-lakes-environmental-database).
+  - Agricultural runoff: [USGS National Water Information System (NWIS)](https://waterdata.usgs.gov/nwis).
+- **Species**:
+  - Fish distributions: [Great Lakes Fisheries Commission](http://www.glfc.org/).
+- **Life Processes**:
+  - Spawning and migration data: [NOAA Fisheries Great Lakes Habitat Restoration](https://www.fisheries.noaa.gov/region/great-lakes).
+- **Sensitivity**:
+  - Habitat and species sensitivity: [NatureServe Explorer](https://explorer.natureserve.org/).
+
+#### **Chesapeake Bay**
+- **Human Activities/Stressors**:
+  - Agricultural runoff and urban development: [Chesapeake Bay Program Data Hub](https://data.chesapeakebay.net/).
+- **Species**:
+  - Fisheries and aquatic species: [NOAA Chesapeake Bay Office](https://www.fisheries.noaa.gov/about/noaa-chesapeake-bay-office).
+- **Life Processes**:
+  - Spawning data for striped bass and blue crabs: [MD DNR Monitoring Program](https://dnr.maryland.gov/fisheries/).
+- **Sensitivity**:
+  - Water quality and habitat models: [EPA Chesapeake Bay TMDL](https://www.epa.gov/chesapeake-bay-tmdl).
+
+#### **Arctic Marine Ecosystem**
+- **Human Activities/Stressors**:
+  - Shipping and oil exploration: [MarineTraffic](https://www.marinetraffic.com/) and [Arctic Data Center](https://arcticdata.io/).
+- **Species**:
+  - Marine mammals and seabirds: [Polar Data Catalogue](https://www.polardata.ca/).
+- **Life Processes**:
+  - Habitat use during migration: [NSIDC Arctic Animal Movement Archive](https://arcticdata.io/catalog/portals/NSIDC-AAMA).
+- **Sensitivity**:
+  - Ice-edge sensitivity data: [AMAP Arctic Monitoring and Assessment Program](https://www.amap.no/).
+
+#### **Mississippi River Basin**
+- **Human Activities/Stressors**:
+  - Sedimentation and agricultural runoff: [USGS National Water Information System (NWIS)](https://waterdata.usgs.gov/nwis).
+- **Species**:
+  - Freshwater species distributions: [FishMap.org](https://fishmap.org/).
+- **Life Processes**:
+  - Spawning and migration of freshwater species: [Mississippi Basin Fish Habitat Partnership](https://www.fishhabitat.org/partnership/mississippi-river-basin-fish-habitat-partnership).
+- **Sensitivity**:
+  - Species vulnerability to runoff: [EPA EnviroAtlas](https://www.epa.gov/enviroatlas).
+
+#### **Pacific Northwest Forests**
+- **Human Activities/Stressors**:
+  - Forestry impacts: [US Forest Service Forest Inventory and Analysis (FIA)](https://www.fia.fs.usda.gov/).
+  - Dams and hydropower: [NOAA West Coast Region Habitat Restoration](https://www.fisheries.noaa.gov/region/west-coast).
+- **Species**:
+  - Salmon migration data: [StreamNet](http://www.streamnet.org/).
+- **Life Processes**:
+  - Salmon spawning and juvenile rearing: [NOAA Fisheries Salmon Data](https://www.fisheries.noaa.gov/west-coast).
+- **Sensitivity**:
+  - Habitat sensitivity to forestry: [USGS Land Change Science Program](https://www.usgs.gov/centers/eros/science/land-change-science-program).
+
+#### **Amazon River Basin**
+- **Human Activities/Stressors**:
+  - Deforestation and mining: [Global Forest Watch](https://www.globalforestwatch.org/).
+- **Species**:
+  - Fish biodiversity: [FishBase](https://www.fishbase.se/).
+- **Life Processes**:
+  - Migratory data for catfish species: [Amazon Fish Project](https://amazon-fish.com/).
+- **Sensitivity**:
+  - Habitat vulnerability to sedimentation: [WWF Living Amazon Initiative](https://wwf.panda.org/discover/knowledge_hub/where_we_work/amazon/).
+
+#### **Coral Reef Ecosystems**
+- **Human Activities/Stressors**:
+  - Bleaching events and fishing pressures: [NOAA Coral Reef Watch](https://coralreefwatch.noaa.gov/).
+- **Species**:
+  - Reef fish and coral distributions: [GBIF](https://www.gbif.org/).
+- **Life Processes**:
+  - Spawning aggregation sites: [ReefBase](http://www.reefbase.org/).
+- **Sensitivity**:
+  - Coral sensitivity to bleaching: [NOAA Coral Bleaching Database](https://www.coral.noaa.gov/).
+
+
+### **Next Steps**
+Once the ecosystem is selected, these data sources can be explored to integrate relevant datasets for human activities, stressors, species, life processes, and sensitivities. This integration will support the simplified application of the cumulative risk-based framework, providing a practical demonstration of its utility. Let me know if you’d like more details on any ecosystem or data source!

@@ -1,0 +1,19 @@
+---
+title: Background - Timing Windows
+---
+
+Cumulative effects assessments (CEAs) are essential tools for ecosystem-based management, addressing the combined impacts of multiple stressors on ecosystems, habitats, and species. Despite their significance, CEAs often remain disconnected from decision-making processes, limiting their utility for real-world environmental management (Stelzenmüller et al., 2018, 2020). Risk-based frameworks have been proposed to bridge this gap, streamlining the integration of scientific findings into policy and enabling more effective mitigation strategies (Stelzenmüller et al., 2018). Applications of these frameworks include dredging projects (Suedel et al., 2008), watershed assessments (Wilson, 2021), and marine management (Holsman et al., 2017). However, many CEAs remain constrained to broad theoretical frameworks, with limited operational tools for spatio-temporal assessments.
+
+Map-based risk assessments represent a promising operational method for assessing timing windows, where human activities can be strategically planned to minimize ecological risks. These approaches combine data on human activities, ecological processes, and environmental factors to produce spatio-temporal risk maps that guide intervention planning (Pla et al., 2024; Li et al., 2021). Such tools have demonstrated value in biodiversity conservation (Pla et al., 2024), coastal management (Arkema et al., 2014), and disease risk evaluation (Arevalo-Nieto et al., 2022).
+
+Future research needs include operationalizing CEAs to evaluate multiple stressors on wildlife populations (Tyack et al., 2022), communicating uncertainty effectively (Stelzenmüller et al., 2020), and identifying the optimal timing for human interventions. These research gaps form the foundation for developing a timing windows risk calculator based on a spatio-temporal cumulative risk assessment approach. 
+
+Building on Stelzenmüller et al. (2018, 2020), this project aligns with their call for streamlined CEAs. Inspired by Halpern et al. (2008), it adopts a cumulative risk mapping approach and extends it to temporal dynamics. The project also seeks to integrate insights from Suedel et al. (2008) and others on timing windows, creating an operational framework for managing interventions in ecosystems.
+
+The specific objectives of this project are:
+
+1. **Operationalize CEAs**: Extend existing risk-based frameworks to produce actionable outputs for decision-makers.  
+2. **Develop Spatio-Temporal Assessments**: Incorporate spatial and temporal datasets to evaluate risks dynamically.  
+3. **Identify Optimal Timing Windows**: Use map-based risk assessments to determine the least impactful periods for human interventions.  
+4. **Leverage Open Data**: Integrate openly available datasets for stressors, species life processes, and habitat sensitivities.  
+5. **Support Adaptive Management**: Provide tools to assess timing windows for diverse ecosystems and intervention types.  

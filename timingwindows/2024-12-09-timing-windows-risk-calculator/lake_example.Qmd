@@ -1,0 +1,865 @@
+---
+title: Freshwater stream
+execute:
+  warning: false
+  message: false
+format:
+  html:
+    code-fold: true
+    code-summary: "<i><b>Code</b></i>"
+knitr:
+  opts_chunk:
+    out.width: "80%"
+---
+
+```{r}
+#| label: setup
+# Load necessary libraries
+library(sf)
+library(terra)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+# Source functions
+# dir("manuscript/R", full.names = TRUE) |>
+dir("R", full.names = TRUE) |>
+  lapply(source, verbose = FALSE)
+
+# Time steps
+start_date <- as.Date("2024-01-01")
+end_date <- as.Date("2024-12-31")
+time_steps <- seq.Date(start_date, end_date, by = "month")
+```
+
+## Freshwater Stream Example: Fish Species and Stressors
+
+In this example, we focus on a freshwater lake ecosystem, home to three fish species: lake trout (*Salvelinus namaycush*), yellow perch (*Perca flavescens*), and cisco (*Coregonus artedi*). The selected life processes—spawning, natal, and rearing—are critical to their reproductive success and population stability. The main known human activies in the lake are dredging, which results in increased sedimentation, agriculture, which results in contaminant runoffs in the lake, and a ferry that connects the northern and southern shores of the lakes. 
+
+Let us now construct this example and ultimately assess cumulative risks in an attempt to propose management options for human interventions. 
+
+## Area of interest 
+
+Let us begin by defining a fictitious area of interest
+
+```{r}
+# Create the polygon representing the area of interest (aoi)
+# Define coordinates for an elongated lake with irregularities
+lake_coords <- matrix(c(
+  0, 0,
+  600, 25,
+  1000, 100,
+  900, 300,
+  800, 400,
+  600, 300,
+  400, 300,
+  300, 200,
+  100, 100,
+  0, 0
+), ncol = 2, byrow = TRUE)
+
+# Create the sf polygon
+aoi <- st_polygon(list(lake_coords)) |>
+  st_sfc(crs = 32198) |>
+  st_sf() |>
+  smoothr::smooth(method = "chaikin") |>
+  st_as_sf()
+
+# Step 2: Create a raster grid from the polygon
+# Create an empty raster with the extent of the AOI
+grd <- rast(ext(aoi), resolution = 5)
+
+# Rasterize the polygon into the grid
+grd <- rasterize(vect(aoi), grd, field = 1)
+grd$cell_id <- seq_len(ncell(grd))
+names(grd) <- c("aoi", "cell_id")
+
+# Plot the outputs to verify
+plot(grd$aoi, main = "Rasterized AOI", col = "#1dfede")
+plot(aoi, add = TRUE, border = "#7c9894", lwd = 4)
+
+# Convert raster to a tabular format with cell IDs
+grd_table <- as.data.frame(grd, xy = TRUE) |>
+  na.omit()
+```
+
+## Species and Life Processes
+
+We will now simulate the distribution of life stages for the three fish species considered on a weekly basis for a typical year. 
+
+### Lake trout
+
+A top predator in the lake ecosystem, lake trout are sensitive to environmental changes. Lake trout spawn in the fall, usually from late September to early November, in cold, oxygen-rich shallow waters. After spawning, the eggs remain in the substrate over the winter and hatch in the early spring, often in April or May, depending on water temperature and latitude. The rearing process occurs in deeper waters, where juveniles grow before moving to adult habitats. Spawning habitat disruption due to sedimentation can severely impact the species' reproductive success.
+
+```{r}
+#| label: lake_trout
+# Define life stage periods (spawning, natal, rearing)
+life_stages <- data.frame(
+  life_stage = c("spawning", "natal", "rearing"),
+  start_date = as.Date(c("2024-10-01", "2024-04-01", "2024-06-01")),
+  end_date = as.Date(c("2024-11-30", "2024-05-31", "2024-08-31"))
+)
+
+# Create spatial zones for life processes
+# Spawning
+lt_spawning <- simulate_life_process(
+  centers = matrix(c(800, 200), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "spawning", 2:3]
+)
+lt_spawning$ras_df$life_stage <- "spawning"
+
+# Natal
+lt_natal <- simulate_life_process(
+  centers = matrix(c(850, 900, 325, 100), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "natal", 2:3],
+  bandwidth = 40
+)
+lt_natal$ras_df$life_stage <- "natal"
+
+# Natal
+lt_rearing <- simulate_life_process(
+  centers = matrix(c(750, 700, 650, 600, 175, 170, 165, 160), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "rearing", 2:3],
+  bandwidth = 40
+)
+lt_rearing$ras_df$life_stage <- "rearing"
+
+# Bind together
+lake_trout <- dplyr::bind_rows(lt_spawning$ras_df, lt_natal$ras_df, lt_rearing$ras_df) |>
+  dplyr::mutate(species = "lake_trout")
+
+# Visualize results
+lake_trout |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Lake trout life processes")
+```
+
+#### Yellow Perch
+
+This species is a key prey item for larger fish and is also commercially valuable. Yellow perch spawn in early spring, often in shallow areas of the stream. Their eggs and larvae are vulnerable to sedimentation, which can smother eggs and reduce larval survival. The rearing process, occurring in the stream’s vegetated areas, can also be affected by sedimentation and contaminants, particularly from agricultural runoff.
+
+```{r}
+#| label: yellow_perch
+# Define life stage periods (spawning, natal, rearing)
+life_stages <- data.frame(
+  life_stage = c("spawning", "natal", "rearing"),
+  start_date = as.Date(c("2024-03-01", "2024-04-01", "2024-05-01")),
+  end_date = as.Date(c("2024-04-15", "2024-05-15", "2024-08-31"))
+)
+
+# Create spatial zones for life processes
+# Spawning (shallow stream areas)
+yp_spawning <- simulate_life_process(
+  centers = matrix(c(300, 75, 200, 75), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "spawning", 2:3],
+  bandwidth = 50
+)
+yp_spawning$ras_df$life_stage <- "spawning"
+
+# Natal (shallow vegetated areas)
+yp_natal <- simulate_life_process(
+  centers = matrix(c(300, 75, 200, 75), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "natal", 2:3],
+  bandwidth = 30
+)
+yp_natal$ras_df$life_stage <- "natal"
+
+# Rearing (vegetated stream areas)
+yp_rearing <- simulate_life_process(
+  centers = matrix(c(500, 400, 300, 200, 75, 150, 250, 300, 250, 200, 175, 75, 75, 75), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "rearing", 2:3],
+  bandwidth = 50
+)
+yp_rearing$ras_df$life_stage <- "rearing"
+
+# Bind together
+yellow_perch <- dplyr::bind_rows(yp_spawning$ras_df, yp_natal$ras_df, yp_rearing$ras_df) |>
+  dplyr::mutate(species = "yellow_perch")
+
+# Visualize results
+yellow_perch |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Yellow Perch life processes")
+```
+
+
+#### Cisco
+
+Ciscoes are pelagic fish that play a significant role in the food web. They spawn in deep waters during the fall, and their juvenile rearing areas are in the upper layers of the water column. Cisco are particularly vulnerable to contaminants, as these substances can accumulate in their tissues, affecting both their health and the success of their offspring.
+
+```{r}
+#| label: cisco
+# Define life stage periods (spawning, natal, rearing)
+life_stages <- data.frame(
+  life_stage = c("spawning", "natal", "rearing"),
+  start_date = as.Date(c("2024-10-01", "2024-11-01", "2024-06-01")),
+  end_date = as.Date(c("2024-12-31", "2025-01-15", "2024-09-30"))
+)
+
+# Create spatial zones for life processes
+# Spawning (deep waters)
+cisco_spawning <- simulate_life_process(
+  centers = matrix(c(750, 700, 650, 600, 180, 175, 170, 165), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "spawning", 2:3],
+  bandwidth = 30
+)
+cisco_spawning$ras_df$life_stage <- "spawning"
+
+# Natal (pelagic upper layers, widespread)
+cisco_natal <- simulate_life_process(
+  centers = matrix(c(700, 650, 600, 175, 170, 165), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "natal", 2:3],
+  bandwidth = 40
+)
+cisco_natal$ras_df$life_stage <- "natal"
+
+# Rearing (upper water column areas)
+cisco_rearing <- simulate_life_process(
+  centers = matrix(c(750, 700, 650, 600, 550, 525, 180, 175, 170, 165, 160, 150), ncol = 2),
+  raster_grid = grd,
+  period = life_stages[life_stages$life_stage == "rearing", 2:3],
+  bandwidth = 50
+)
+cisco_rearing$ras_df$life_stage <- "rearing"
+
+# Bind together
+cisco <- dplyr::bind_rows(cisco_spawning$ras_df, cisco_natal$ras_df, cisco_rearing$ras_df) |>
+  dplyr::mutate(species = "cisco")
+
+# Visualize results
+cisco |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Cisco life processes")
+```
+
+
+## Stressors 
+
+### Sedimentation from Dredging
+
+Dredging activities in the stream disturb the riverbed, releasing fine sediments that can smother fish eggs, disrupt spawning grounds, and negatively impact water quality. Sedimentation reduces water clarity and light penetration, harming the rearing habitats for yellow perch and lake trout by limiting oxygen levels and impairing vegetation growth. Additionally, dredging physically alters habitats by removing critical substrates, such as rocks and vegetation, essential for spawning and rearing. It can also mobilize contaminants like heavy metals and hydrocarbons trapped in sediments, introducing toxic substances into the water and posing risks to aquatic species and ecosystem health. While dredging presents numerous potential stressors, we consider sedimentation, habitat destruction, and contaminant release as primary concerns in our fictitious lake.
+
+Dredging activities in the lake occur at two known locations: the northern end of the ferry route and a public dock situated at the southwest end of the lake. These recurring dredging activities are associated with sedimentation, habitat destruction, and contaminant release, which pose risks to aquatic species. Sedimentation from dredging reduces water clarity and smothers fish eggs in nearby spawning and rearing habitats. Habitat destruction impacts critical substrates, while mobilized contaminants from disturbed sediments can introduce toxic substances into the water. 
+
+Dredging activities are typically carried out during warmer months, from late spring to early fall (May to September), when conditions are more favorable for construction work and equipment operation. These activities pause during the mild winter months when reduced water temperatures and ice formation on the shoreline make dredging less practical.
+
+
+```{r}
+#| label: dredging_stressors
+# Define stressors from dredging
+dredging_stressors <- data.frame(
+  stressor = c("sedimentation", "habitat_destruction", "contaminants"),
+  start_date = as.Date(c("2024-05-01", "2024-05-01", "2024-05-01")), # Start of dredging period
+  end_date = as.Date(c("2024-06-30", "2024-06-30", "2024-06-30")), # End of dredging period
+  intensity = c(1.0, 0.7, 0.5), # Relative intensity of each stressor
+  bandwidth = c(50, 20, 30) # Bandwidth for spatial distribution
+)
+
+# Define dredging activity locations
+dredging_locations <- matrix(c(
+  650, 350, # Northern end of the ferry route
+  75, 75 # Public dock near the southern shoreline
+), ncol = 2, byrow = TRUE)
+
+# Simulate distribution and intensity for each stressor
+dredging_results <- lapply(1:nrow(dredging_stressors), function(i) {
+  simulate_life_process(
+    centers = dredging_locations,
+    raster_grid = grd,
+    period = dredging_stressors[i, c("start_date", "end_date")], # Stressor-specific period
+    time_steps = seq.Date(dredging_stressors$start_date[i], dredging_stressors$end_date[i], by = "month"),
+    n_samples = 100, # Number of disturbance points
+    bandwidth = dredging_stressors$bandwidth[i], # Stressor-specific bandwidth
+    prob_threshold = 0.05 # Probability threshold
+  )
+})
+
+# Combine all results into a single data frame
+dredging <- lapply(seq_along(dredging_results), function(i) {
+  dredging_results[[i]]$ras_df |>
+    dplyr::mutate(life_stage = dredging_stressors$stressor[i]) # Add stressor label
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(activity = "dredging")
+
+
+# Visualize results for each stressor
+dredging |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Dredging Stressors Distribution")
+```
+
+
+### Contaminants from Agricultural Runoff
+
+Agricultural runoff, including pesticides and fertilizers, introduces toxic substances into the water, affecting species health and reproductive success. These contaminants, particularly nitrates and phosphates, can lead to eutrophication, reducing oxygen levels and impairing the development of fish larvae, especially for species like the yellow perch and cisco.
+
+Agricultural runoff is most pronounced during the growing and harvest seasons, typically from late spring to early fall (May to October). Fertilizer and pesticide applications in spring, combined with summer irrigation and heavy rainfall events, increase the likelihood of nutrient and contaminant runoff into the lake. Runoff diminishes in the winter due to reduced agricultural activity, although occasional thaw events could still contribute to nutrient loading.
+
+```{r}
+#| label: agricultural_runoff
+# Define life stage periods for runoff intensity
+runoff_intensity <- data.frame(
+  season = c("spring", "summer", "fall"),
+  start_date = as.Date(c("2024-04-01", "2024-06-01", "2024-09-01")),
+  end_date = as.Date(c("2024-05-31", "2024-08-31", "2024-10-31")),
+  intensity = c(1.0, 0.5, 0.8), # Relative intensity for each period
+  bandwidth = c(70, 30, 60), # Bandwidth for spatial spread
+  n_samples = c(300, 100, 225) # Sample size for each season
+)
+
+# Create spatial zones for runoff (same locations for all seasons)
+runoff_centers <- matrix(c(
+  200, 0, # Location 1
+  900, 50, # Location 2
+  400, 300 # Location 3
+), ncol = 2, byrow = TRUE)
+
+# Simulate runoff for each season with custom parameters
+runoff_results <- lapply(1:nrow(runoff_intensity), function(i) {
+  simulate_life_process(
+    centers = runoff_centers,
+    raster_grid = grd,
+    period = runoff_intensity[i, c("start_date", "end_date")], # Season's time range
+    time_steps = seq.Date(runoff_intensity$start_date[i], runoff_intensity$end_date[i], by = "month"),
+    n_samples = runoff_intensity$n_samples[i], # Custom sample size
+    bandwidth = runoff_intensity$bandwidth[i], # Custom bandwidth
+    prob_threshold = 0.05 # Threshold for affected areas
+  )
+})
+
+# Combine all results into one data frame
+agricultural_runoff <- lapply(seq_along(runoff_results), function(i) {
+  runoff_results[[i]]$ras_df |>
+    dplyr::mutate(life_stage = "contaminants") # Add season label
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(activity = "agriculture")
+
+# Visualize results
+agricultural_runoff |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Agricultural Runoff Stressor")
+```
+
+
+### Ferry Operations
+
+A ferry connecting the northern and southern shores of the lake creates continuous surface disturbances and underwater noise that can disrupt fish behavior, particularly during spawning and rearing periods. The ferry's propeller wash and regular crossings can also resuspend sediments, exacerbating turbidity and potentially impacting sensitive nearshore habitats.
+
+The ferry operates year-round, as the mild winter conditions in the region do not inhibit its function. The ferry’s crossings are frequent and consistent throughout the year, creating continuous surface disturbances, noise, and sediment resuspension that may impact fish behavior and habitat quality at any time, with potentially heightened effects during sensitive life processes such as spawning and rearing.
+
+```{r}
+#| label: ferry_operations
+# Define the ferry route as a line connecting the northern and southern shores
+ferry_route <- matrix(c(
+  650, 350, # Northern shore (start point)
+  550, 0 # Southern shore (end point)
+), ncol = 2, byrow = TRUE)
+
+# Convert the ferry route to an `sf` object
+ferry_route_sf <- st_linestring(ferry_route) |>
+  st_sfc(crs = st_crs(grd)) |>
+  st_sf()
+
+# Sample points along the ferry route
+centers <- st_sample(ferry_route_sf, size = 20) |>
+  st_coordinates()
+colnames(centers) <- c("V1", "V2", "L")
+
+# Simulate ferry operations as a constant year-round stressor
+ferry_operations <- simulate_life_process(
+  centers = centers,
+  raster_grid = grd,
+  period = as.Date(c("2024-01-01", "2024-12-31")), # Year-round
+  time_steps = seq.Date(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "month"), # Monthly steps
+  n_samples = 100, # Number of ferry-related disturbances per time step
+  bandwidth = 30, # Bandwidth for disturbance spread
+  prob_threshold = 0.05 # Threshold for identifying affected areas
+)
+
+ferry <- ferry_operations$ras_df |>
+  dplyr::mutate(
+    life_stage = "disturbance",
+    activity = "ferry operations"
+  )
+
+# Visualize results
+ferry |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(month, life_stage) |>
+  make_facets("Ferry operations intensity")
+
+```
+
+
+## Sensitivity 
+
+The sensitivity values were assigned to reflect the relative vulnerability of different species and life stages to the four stressors identified in the system: sedimentation, habitat destruction, contaminants, and ferry operations. These values are scaled to ensure comparability across stressors, with a value of `1.0` representing the maximum expected sensitivity to a given stressor.
+
+- **Sedimentation**: 
+  - Sedimentation poses the greatest risk to spawning life stages, particularly for **lake trout** (`1.0`) and **yellow perch** (`0.9`), as fine sediments can smother eggs and degrade spawning habitats. 
+  - The sensitivity of **cisco** to sedimentation is lower during spawning (`0.8`), reflecting their preference for deeper waters, where sedimentation effects are somewhat mitigated. 
+  - Natal and rearing stages exhibit reduced sensitivity across all species due to their lower reliance on sediment-free habitats.
+
+- **Habitat Destruction**: 
+  - Habitat destruction significantly affects **lake trout** spawning (`1.0`) and natal (`0.8`) stages, as they depend heavily on stable substrates and intact habitats. 
+  - **Yellow perch** are similarly affected during spawning (`0.9`) and natal (`0.7`) stages. 
+  - **Cisco** exhibit moderate sensitivity (`0.8` for spawning), reflecting their broader habitat tolerance.
+
+- **Contaminants**:
+  - Contaminants, including those released by dredging and agricultural runoff, disproportionately affect the natal (`0.9`) and rearing (`0.8`) stages of **lake trout** and **yellow perch**, as juveniles are more susceptible to toxic substances during development. 
+  - **Cisco** are highly sensitive to contaminants during spawning (`1.0`) and natal stages (`0.9`), due to bioaccumulation in pelagic environments.
+
+- **Ferry Operations**:
+  - Ferry operations, primarily through underwater noise and disturbances, pose lower risks compared to other stressors. 
+  - **Yellow perch** exhibit moderate sensitivity during rearing (`0.5`), reflecting their proximity to shoreline areas where ferry activity is concentrated. 
+  - **Lake trout** and **cisco** show reduced sensitivity overall, with spawning (`0.6` and `0.5`, respectively) being the most affected life stage due to potential behavioral disruptions caused by noise.
+
+The sensitivity values emphasize the interplay between species-specific ecological traits, life stage vulnerabilities, and stressor-specific impacts. Spawning stages across all species are consistently more sensitive to sedimentation and habitat destruction, while natal and rearing stages show heightened vulnerabilities to contaminants. Ferry operations, although less impactful, still contribute to cumulative risks, particularly for species reliant on shoreline or shallow-water habitats. 
+
+This sensitivity framework provides a basis for quantifying and mapping risks, guiding the identification of optimal timing and spatial windows for interventions.
+
+```{r}
+#| label: sensitivity
+# Create updated sensitivity data frame
+sensitivity <- data.frame(
+  stressor = rep(
+    c(
+      rep("sedimentation", 3),
+      rep("habitat_destruction", 3),
+      rep("contaminants", 3),
+      rep("disturbance", 3)
+    ),
+    3
+  ),
+  species = c(
+    rep("lake_trout", 12),
+    rep("yellow_perch", 12),
+    rep("cisco", 12)
+  ),
+  life_stage = rep(c("spawning", "natal", "rearing"), 12),
+  sensitivity = c(
+    # Lake Trout Sensitivity
+    1.0, 0.7, 0.5, # Sedimentation
+    1.0, 0.8, 0.6, # Habitat Destruction
+    0.9, 0.9, 0.8, # Contaminants
+    0.6, 0.5, 0.4, # Ferry Operations
+    # Yellow Perch Sensitivity
+    0.9, 0.7, 0.6, # Sedimentation
+    0.9, 0.7, 0.7, # Habitat Destruction
+    0.8, 0.9, 0.8, # Contaminants
+    0.7, 0.6, 0.5, # Ferry Operations
+    # Cisco Sensitivity
+    0.8, 0.6, 0.5, # Sedimentation
+    0.8, 0.7, 0.6, # Habitat Destruction
+    1.0, 0.9, 0.7, # Contaminants
+    0.5, 0.4, 0.3 # Ferry Operations
+  )
+)
+
+# Create a heatmap of sensitivities
+sensitivity |>
+  dplyr::mutate(name = glue::glue("{species}_{life_stage}")) |>
+  ggplot(aes(x = name, y = stressor, fill = sensitivity)) +
+  geom_tile(color = "white") +
+  scale_fill_viridis_c(option = "D", name = "Sensitivity") +
+  labs(
+    title = "Sensitivity Heatmap",
+    x = "Life Stage",
+    y = "Stressor"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.text.y = element_text(size = 10),
+    panel.grid = element_blank()
+  )
+```
+
+
+## Risk assessment 
+
+Now we have all the data necessary to perform a spatially and temporally explicit rcumulative risk assessment:
+
+```{r}
+#| label: data_req
+# Species
+species <- dplyr::bind_rows(lake_trout, yellow_perch, cisco) |>
+  dplyr::rename(species_presence = presence)
+knitr::kable(head(species))
+
+# Stressors
+stressors <- dplyr::bind_rows(dredging, agricultural_runoff, ferry) |>
+  dplyr::rename(stressor_presence = presence, stressor = life_stage)
+knitr::kable(head(stressors))
+
+# Sensitivity
+sensitivity <- sensitivity |>
+  dplyr::select(stressor, species, life_stage, sensitivity)
+knitr::kable(head(sensitivity))
+```
+
+Now let us assess the risks present in our fictitious lake based on the information that we have. As previously presented, we propose to use an additive cumulative risk model that considers both time and space to assess the risks of each stressor to each life stage in our system. We will begin by assessing the risk at each time step and in each cell of the study grid. This assessment would essentially represent the baseline risk levels in our fictitious lake base on the intensity of stressors, the distribution of life stages, and the sensitivity of life stages to stressors. 
+
+
+```{r}
+#| label: risk_assessment
+risk <- dplyr::full_join(species, stressors, by = c("x", "y", "date"), relationship = "many-to-many") |>
+  na.omit() |>
+  dplyr::left_join(sensitivity, by = c("stressor", "species", "life_stage")) |>
+  dplyr::mutate(risk = species_presence * stressor_presence * sensitivity) |>
+  dplyr::filter(risk > 0) |>
+  dplyr::select(x, y, date, life_stage, species, stressor, activity, risk)
+knitr::kable(head(risk))
+
+# Visualize monthly cumulative risk
+tmp <- risk |>
+  dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+  dplyr::group_by(x, y, month) |>
+  dplyr::summarise(cum_risk = sum(risk)) |>
+  dplyr::ungroup()
+
+# Function to create faceted raster figures with AOI polygon
+ggplot(tmp, aes(x = x, y = y, fill = cum_risk)) +
+  geom_tile() +
+  facet_wrap(~month, ncol = 3) +
+  scale_fill_gradientn(
+    colors = viridis::viridis(100),
+    na.value = "grey",
+    name = "Cumulative Risk"
+  ) +
+  labs(
+    x = "Longitude",
+    y = "Latitude",
+    title = "Monthly Cumulative Risk"
+  ) +
+  coord_fixed() +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    strip.text = element_text(size = 8),
+    panel.grid = element_blank()
+  )
+```
+
+## Timing and Spacing Windows assessments
+
+Now let us finally explore the reasoning behing this work: identify time and/or space windows to optimize interventions in our fictitious lakes based on the knowledge that we have in the lake. We will divide this section to explore the possibilities offered by the model as a function of data availability and integrated vs non-integrated ecosystem management. The integrated vs non-integrated management will simply consider or not consider pre-existing risks in the system, respectively. Then we can either wish to minizimize potential impacts from planned projects through the project appraisal phase, which can be done in an integrated or non-integrated framework, or we can attempt to maximize outcomes of management actions, which we will always look at through the lense of integrated management. 
+
+### Project appraisal
+
+We begin with project appraisal, i.e. attempting to minimize the affects of a proposed project. For our example, let us imagine that there is a project under review that wishes to incorporate an additional dock for pleasure vessels on the lake. Since dredging activies are performed typically from late spring to early fall (May to September), we will perform the assessment for that period.
+
+#### Temporal data 
+
+We begin with an assessment based solely on temporal data. In this case, the only assessment possible is the identification of an optimal timing window for intervention. Let us simplify our risk assessment and remove all spatial information.
+
+```{r}
+# Species
+sp <- species |>
+  dplyr::group_by(date, species, life_stage) |>
+  dplyr::summarise(species_presence = sum(species_presence)) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(species_presence = dplyr::if_else(species_presence > 0, 1, 0))
+knitr::kable(head(sp))
+
+# Stressors
+st <- stressors |>
+  dplyr::group_by(date, activity, stressor) |>
+  dplyr::summarise(stressor_presence = sum(stressor_presence)) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(stressor_presence = dplyr::if_else(stressor_presence > 0, 1, 0))
+knitr::kable(head(st))
+
+# Planned stressors
+time_planned <- seq(as.Date("2024-05-01"), as.Date("2024-09-30"), by = "month")
+stress_planned <- c("sedimentation", "habitat_destruction", "contaminants")
+planned_st <- data.frame(
+  date = as.character(rep(time_planned, length(stress_planned))),
+  stressor = rep(stress_planned, length(time_planned)),
+  activity = "dredging_planned",
+  stressor_presence = 1
+)
+knitr::kable(head(planned_st))
+
+# Combined stressors
+st <- dplyr::bind_rows(st, planned_st)
+
+# Risk
+rsk_all <- dplyr::full_join(sp, st, by = c("date"), relationship = "many-to-many") |>
+  na.omit() |>
+  dplyr::left_join(sensitivity, by = c("stressor", "species", "life_stage")) |>
+  dplyr::mutate(risk = species_presence * stressor_presence * sensitivity) |>
+  dplyr::filter(risk > 0) |>
+  dplyr::select(date, life_stage, species, stressor, activity, risk) |>
+  dplyr::arrange(activity, stressor, date)
+knitr::kable(head(rsk_all))
+
+# Cumulative risk - integrated
+rskcum_int <- rsk_all |>
+  dplyr::group_by(date) |>
+  dplyr::summarise(cum_risk = sum(risk)) |>
+  dplyr::ungroup()
+rskcum_int <- data.frame(
+  date = seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "month") |>
+    as.character()
+) |>
+  dplyr::left_join(rskcum_int, by = "date") |>
+  dplyr::mutate(
+    cum_risk = if_else(is.na(cum_risk), 0, cum_risk),
+    integrated = TRUE
+  )
+knitr::kable(rskcum_int)
+
+# Cumulative risk - non-integrated
+rskcum_non_int <- rsk_all |>
+  dplyr::filter(activity == "dredging_planned") |>
+  dplyr::group_by(date) |>
+  dplyr::summarise(cum_risk = sum(risk)) |>
+  dplyr::ungroup()
+rskcum_non_int <- data.frame(
+  date = seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "month") |>
+    as.character()
+) |>
+  dplyr::left_join(rskcum_non_int, by = "date") |>
+  dplyr::mutate(
+    cum_risk = if_else(is.na(cum_risk), 0, cum_risk),
+    integrated = FALSE
+  )
+knitr::kable(rskcum_int)
+
+# Bind together
+rskcum <- dplyr::bind_rows(rskcum_int, rskcum_non_int) |>
+  dplyr::mutate(date = lubridate::as_date(date))
+
+# Timing windows
+## Integrated
+window <- 1
+tw <- rbind(
+  calculate_optimal_timing(rskcum_int,
+    window_size = window,
+    period_start = "2024-06-01",
+    period_end = "2024-08-31",
+    wrap = TRUE
+  ),
+  calculate_optimal_timing(rskcum_non_int,
+    window_size = window,
+    period_start = "2024-06-01",
+    period_end = "2024-08-31",
+    wrap = TRUE
+  )
+)
+
+# Visualize
+plot_cumulative_risk(risk_data = rskcum, timing_data = tw)
+```
+
+
+#### Spatial data 
+
+TODO: space optimization
+
+
+#### Spatiotemporal data 
+
+TODO: space optimization
+TODO: space-time optimization
+
+Now we will explore how to use the spatio-temporal data to identify timing windows that minimize the risks posed by the proposed project. In this particular example, we will start by a known location for the project, then we will propose two different places to select the place and time that would minimize the effects of the project.
+
+The first location will be located at the same spot as the northern end of the ferry.
+
+```{r}
+dredging_stressors <- data.frame(
+  stressor = c("sedimentation", "habitat_destruction", "contaminants"),
+  start_date = as.Date(c("2024-06-01", "2024-06-01", "2024-06-01")), # Start of dredging period
+  end_date = as.Date(c("2024-08-31", "2024-08-31", "2024-08-31")), # End of dredging period
+  intensity = c(1.0, 0.7, 0.5), # Relative intensity of each stressor
+  bandwidth = c(50, 20, 30) # Bandwidth for spatial distribution
+)
+
+# Define dredging activity locations
+dredging_locations <- matrix(c(
+  650, 350 # , # Southern end of the ferry route
+  # 75, 75 # Public dock near the southern shoreline
+), ncol = 2, byrow = TRUE)
+
+# Simulate distribution and intensity for each stressor
+dredging_results <- lapply(1:nrow(dredging_stressors), function(i) {
+  simulate_life_process(
+    centers = dredging_locations,
+    raster_grid = grd,
+    period = dredging_stressors[i, c("start_date", "end_date")], # Stressor-specific period
+    time_steps = seq.Date(dredging_stressors$start_date[i], dredging_stressors$end_date[i], by = "month"),
+    n_samples = 100, # Number of disturbance points
+    bandwidth = dredging_stressors$bandwidth[i], # Stressor-specific bandwidth
+    prob_threshold = 0.05 # Probability threshold
+  )
+})
+
+# Combine all results into a single data frame
+planned_dredging <- lapply(seq_along(dredging_results), function(i) {
+  dredging_results[[i]]$ras_df |>
+    dplyr::mutate(life_stage = dredging_stressors$stressor[i]) # Add stressor label
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(activity = "dredging_planned") |>
+  dplyr::rename(stressor_presence = presence, stressor = life_stage)
+
+# planned_dredging |>
+#   dplyr::mutate(month = format(as.Date(date), "%Y-%m")) |>
+#   dplyr::group_by(month, life_stage) |>
+#   make_facets("Ferry operations intensity")
+
+
+# Combined stressors
+st <- dplyr::bind_rows(stressors, planned_dredging)
+
+# Risk
+rsk_all <- dplyr::full_join(species, st, by = c("x", "y", "date"), relationship = "many-to-many") |>
+  na.omit() |>
+  dplyr::left_join(sensitivity, by = c("stressor", "species", "life_stage")) |>
+  dplyr::mutate(risk = species_presence * stressor_presence * sensitivity) |>
+  dplyr::filter(risk > 0) |>
+  dplyr::select(x, y, date, life_stage, species, stressor, activity, risk) |>
+  dplyr::arrange(activity, stressor, date)
+knitr::kable(head(rsk_all))
+
+# Cumulative risk - integrated
+rskcum_int <- rsk_all |>
+  dplyr::group_by(date) |>
+  dplyr::summarise(cum_risk = sum(risk)) |>
+  dplyr::ungroup()
+rskcum_int <- data.frame(
+  date = seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "month") |>
+    as.character()
+) |>
+  dplyr::left_join(rskcum_int, by = "date") |>
+  dplyr::mutate(
+    cum_risk = if_else(is.na(cum_risk), 0, cum_risk),
+    integrated = TRUE
+  )
+knitr::kable(rskcum_int)
+
+# Cumulative risk - non-integrated
+rskcum_non_int <- rsk_all |>
+  dplyr::filter(activity == "dredging_planned") |>
+  dplyr::group_by(date) |>
+  dplyr::summarise(cum_risk = sum(risk)) |>
+  dplyr::ungroup()
+rskcum_non_int <- data.frame(
+  date = seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "month") |>
+    as.character()
+) |>
+  dplyr::left_join(rskcum_non_int, by = "date") |>
+  dplyr::mutate(
+    cum_risk = if_else(is.na(cum_risk), 0, cum_risk),
+    integrated = FALSE
+  )
+knitr::kable(rskcum_non_int)
+
+# Bind together
+rskcum <- dplyr::bind_rows(rskcum_int, rskcum_non_int) |>
+  dplyr::mutate(date = lubridate::as_date(date))
+
+# Timing windows
+## Integrated
+window <- 1
+tw <- rbind(
+  calculate_optimal_timing(rskcum_int,
+    window_size = window,
+    period_start = "2024-06-01",
+    period_end = "2024-08-31",
+    wrap = TRUE
+  ),
+  calculate_optimal_timing(rskcum_non_int,
+    window_size = window,
+    period_start = "2024-06-01",
+    period_end = "2024-08-31",
+    wrap = TRUE
+  )
+)
+
+# Visualize
+plot_cumulative_risk(risk_data = rskcum, timing_data = tw)
+
+```
+
+
+
+
+
+
+
+
+---
+
+**4. Explore Optimization Approaches**
+- **Time Optimization**:
+  - Use a sliding window to identify periods with minimal risk for interventions (e.g., spawning windows).
+  - Explore tools like `zoo::rollapply` or `RcppRoll` for rolling calculations.
+- **Space Optimization**:
+  - Identify low-risk areas using spatial clustering or graph-based methods (e.g., `terra` for raster operations or `igraph` for connectivity).
+- **Space-Time Optimization**:
+  - Combine the outputs of spatial and temporal analyses to identify optimal windows in both dimensions.
+  - Use spatio-temporal clustering algorithms like **DBSCAN** or create dynamic risk maps.
+
+---
+
+**5. Build a Conceptual Figure**
+- **Design Elements**:
+  - **Layer 1**: Temporal risk trends (e.g., a line chart showing risk over time).
+  - **Layer 2**: Spatial risk distribution (e.g., a heatmap or risk surface).
+  - **Layer 3**: Combined spatio-temporal dynamics (e.g., a time-series of maps or 3D surface plot).
+- Tools for Figure:
+  - Use `ggplot2` for basic visualizations or `leaflet`/`sf` for spatial data.
+  - For conceptual illustrations, use tools like `PowerPoint`, `Illustrator`, or `Inkscape`.
+
+---
+
+**6. Iterate with Simplified Data**
+- Start with **simplified data** to validate the framework and ensure calculations are accurate.
+- Once confident in the approach, scale up to include the full set of species, life processes, and stressors.
+
+---
+
+**7. Document Insights**
+- For each optimization dimension (time, space, space-time), record:
+  - The methods used.
+  - Key findings (e.g., optimal timing windows or spatial hotspots).
+  - How these findings align with the fictitious example.
+
+---
+
+**8. Refine and Finalize Outputs**
+- Fine-tune the risk assessment and optimization results.
+- Create polished versions of the conceptual figure and any supplementary visualizations.
+- Ensure all insights are directly tied back to the fictitious example for clarity and relevance.
+
+---
+
+**9. Validate the Workflow**
+- Conduct a quick peer review or self-check to ensure the logic of the example aligns with the proposed framework.
+- Adjust any methods or figures based on feedback or additional insights.
+
+This structured workflow ensures you make steady progress on the fish example while systematically exploring optimization approaches and developing a clear conceptual figure. Let me know if you’d like detailed help with any step!
+
+
+
+
+
+

@@ -1,0 +1,234 @@
+---
+title: Methods
+---
+
+The proposed approach to evaluate timing windows for human interventions is based on cumulative risk assessments and is adaptable to varying levels of ecosystem management integration and data availability. In contexts of integrated ecosystem management, the planned risks from proposed activities are overlaid with pre-existing risks from other stressors to capture cumulative risks comprehensively. In non-integrated contexts, only the risks of planned activities are analyzed. 
+
+
+The proposed approach also supports both spatio-temporal assessments, which integrate the spatial and temporal variability of stressors and species life processes, and strictly temporal assessments, which focus on timing considerations alone. This flexibility ensures the approach can be applied across diverse ecosystems and management scenarios, as well as in data-poor and data-rich environments.
+
+
+## Cumualtive risk assessment 
+
+Whether the assessment is integrated and spatio-temporal or non-integrated and strictly temporal, the risk assessment model remains the same and requires the same types of inputs: knowledge of environmental stressors arising from human activities, species life processes (e.g., spawning, migration, and rearing), and the sensitivity of species life processes to these stressors. However, the type and quality of knowledge required will differ depending on the assessment context.
+
+### Model
+
+The model evaluates cumulative risk by additively combining the risks of all individual stressor-life process combinations, based on the framework proposed by @halpern2008 for assessing cumulative effects in the world's oceans. The simplest form of the model is as follows:
+
+$Rc_t = \sum_i \sum_j S_{i,t} \cdot Sp_{j,t} \cdot \sum_k L_{j,k,t} \cdot \mu_{i,k}$
+
+Where:
+- $Rc_t$: Cumulative risk score at time $t$,
+- $S_{i,t}$: Presence or intensity of stressor $i$ at time $t$,
+- $Sp_{j,t}$: Presence of species $j$ at time $t$,
+- $L_{j,k,t}$: Presence of life process $k$ of species $j$ at time $t$,
+- $\mu_{i,k}$: Sensitivity of life process $k$ to stressor $i$.
+
+The model can also be strictly spatial, swapping out time ($t$) for space ($x$) to incorporate the spatial distribution ($x$) of stressors, species, and life processes:
+
+$Rc_x = \sum_i \sum_j S_{i,x} \cdot Sp_{j,x} \cdot \sum_k L_{j,k,x} \cdot \mu_{i,k}$
+
+Here, data on stressors and species life processes are now characterized in location $x$, typically denoting a cell in a regular grid delineating an area of interest.
+
+In its most complex form, the model incorporates both time ($t$) and space ($x$), as well as the sensitivity of habitats where life processes occur:
+
+$Rc_{t,x} = \sum_i \sum_j S_{i,t,x} \cdot Sp_{j,t,x} \cdot \sum_k L_{j,k,t,x} \cdot \overline{\mu_i}$
+
+Here, data on stressors and species life processes are now characterized at time $t$ in location $x$. $\overline{\mu_i}$ represents the joint sensitivity of a life process $k$ and its associated habitat $l$ to stressor $i$, calculated as:
+
+$\overline{\mu_i} = w \cdot \mu_{i,k} + (1 - w) \cdot \mu_{i,l}$
+
+Where:
+- $\mu_{i,k}$: Sensitivity of life process $k$ to stressor $i$,
+- $\mu_{i,l}$: Sensitivity of habitat $l$ to stressor $i$,
+- $w$: Weighting factor (default $w = 0.5$), representing the relative importance of life process and habitat sensitivity.
+
+The default equal weighting ($w = 0.5$) assumes that life process and habitat sensitivities contribute equally to the overall risk calculation. This assumption can be adjusted based on specific ecosystem or management needs.
+
+### Data Requirements 
+
+To operationalize the risk assessment model, a variety of datasets are required to represent human activities, environmental stressors, species, life processes, and the sensitivities of species and habitats to stressors. These datasets must be spatially and/or temporally explicit to ensure compatibility with the chosen risk assessment framework.
+By combining these datasets, the risk assessment model can comprehensively evaluate cumulative risks and provide actionable outputs for integrated ecosystem management or for project-specific environmental assessments.
+
+
+#### Human Activities and Environmental Stressors
+
+- **Description**: Data on human activities and their associated environmental stressors form the basis of the risk assessment, providing information on the sources of potential ecological impacts.
+- **Requirements**:
+  - **Spatial and Temporal Presence**:
+    - Location of activities or stressors (e.g., point, line, or grid-based spatial data).
+    - Timing and duration of activities or stressors (e.g., daily, seasonal, or annual presence).
+  - **Intensity**:
+    - Quantitative metrics such as pollutant concentrations, sound levels, or habitat modification intensity.
+  - **Examples**:
+    - Dredging operations (location and timing of activities).
+    - Shipping traffic (routes and temporal activity patterns).
+    - Industrial discharges (pollutant types and concentrations).
+- **Formats**:
+  - Tabular data with spatial and temporal columns (e.g., cell IDs, dates).
+  - Raster or vector datasets representing stressor distribution (e.g., noise maps, pollutant layers).
+
+#### Species and Their Presence
+
+- **Description**: Data on the presence and distribution of species form a critical layer for assessing cumulative risks, representing the ecological components affected by stressors.
+- **Requirements**:
+  - **Presence/Absence**:
+    - Spatial data on the occurrence of species (e.g., habitat ranges, species distribution models).
+  - **Abundance** (if available):
+    - Quantitative data on population density or biomass.
+  - **Temporal Dynamics**:
+    - Seasonal patterns or migratory timings where applicable.
+  - **Examples**:
+    - Fish telemetry data for migration patterns.
+    - Species distribution maps for terrestrial or aquatic species.
+- **Formats**:
+  - Spatial polygons or raster layers for habitat ranges.
+  - Temporal datasets linked to spatial occurrences (e.g., time-series of species presence).
+
+
+#### Life Processes of Species
+
+- **Description**: Life processes such as spawning, migration, feeding, or rearing are key ecological activities that interact with stressors to produce risks.
+- **Requirements**:
+  - **Identification of Life Processes**:
+    - Detailed documentation of species-specific life processes (e.g., spawning periods, feeding grounds).
+  - **Spatial and Temporal Presence**:
+    - Locations and timing of life processes.
+  - **Examples**:
+    - Spawning areas for fish during specific months.
+    - Migration corridors for birds or mammals.
+- **Formats**:
+  - Tabular datasets linking species and life processes to spatial and temporal dimensions.
+  - Spatial layers representing critical habitats (e.g., polygons for spawning grounds).
+
+#### Sensitivity of Life Processes and Habitats to Stressors
+
+- **Description**: Sensitivity metrics quantify the degree to which species life processes and habitats are affected by specific stressors.
+- **Requirements**:
+  - **Life Process Sensitivities** ($\mu_{i,k}$):
+    - Quantitative measures of how stressors (e.g., noise, pollution) impact specific life processes (e.g., reproduction, migration).
+    - Examples: Sensitivity scores for noise disruption during migration or sedimentation during spawning.
+  - **Habitat Sensitivities** ($\mu_{i,l}$):
+    - Quantitative measures of how stressors affect habitats supporting life processes.
+    - Examples: Habitat degradation scores due to industrial discharges or dredging.
+  - **Combined Sensitivity** ($\overline{\mu_i}$):
+    - Joint sensitivities calculated using weighting factors ($w$) to balance the relative importance of life process and habitat sensitivities.
+- **Formats**:
+  - Sensitivity matrices linking stressors to life processes and habitats (e.g., species-stressor sensitivity tables).
+  - Lookup tables or raster layers for habitat vulnerability indices.
+
+
+#### Summary of Data Needs
+
+| **Category**                   | **Key Data Elements**                                          | **Example Formats**                 |
+|---------------------------------|---------------------------------------------------------------|-------------------------------------|
+| **Human Activities/Stressors** | Spatial and temporal presence, intensity of stressors         | Tabular (cell IDs, dates), raster   |
+| **Species**                    | Species presence/absence, abundance, temporal dynamics        | Spatial polygons, time-series       |
+| **Life Processes**             | Identification, spatial and temporal patterns                | Tabular (linked to species), polygons|
+| **Life Process Sensitivities** | Sensitivity of life processes to stressors                   | Sensitivity matrices, lookup tables |
+| **Habitat Sensitivities**      | Sensitivity of habitats to stressors                         | Raster layers, vulnerability indices|
+
+
+### Outputs
+
+The outputs of the cumulative risk assessment are designed to accommodate a range of analytical needs, providing flexibility for strictly temporal, strictly spatial, and spatio-temporal analyses. These outputs support both exploratory visualization and computational workflows, ensuring adaptability to diverse management and decision-making contexts across time, space, or both depending on the quality of available data or the goal of the assessment. 
+
+#### Temporal Outputs
+
+For scenarios where spatial data are unavailable or unnecessary, the risk assessment provides strictly temporal outputs that focus on aggregated cumulative risks over time or risk scores for particular species, life processes, or stressors.
+
+**Tabular Outputs Structure**:
+
+```r
+'data.frame':   n obs. of  5 variables:
+$ date         : Date, format: "2024-01-01"  # Datetime `t`
+$ species      : numeric  # Species ID `Sp`
+$ life_process : numeric  # Life process ID `L`
+$ stressor     : numeric  # Stressor ID `S`
+$ risk         : numeric  # Risk score `R_c` from stressor `i` for species `j` and life process `k` at time `t`
+```
+
+**Use Cases**:
+  - **Optimal Timing Windows**: Identify time periods with minimal or maximal cumulative risks for planned interventions.
+  - **Trend Analysis**: Examine fluctuations in risk over time for specific species, life processes, or stressors.
+  - **Simplified Decision Support**: Enable analysis when spatial data are unavailable.
+
+#### Spatial Outputs
+
+The framework also supports strictly spatial outputs, which summarize cumulative risks across geographic areas without accounting for temporal dimensions. The outputs of these types of assessment provide static spatial risk maps of an area of interest showing aggregated cumulative risk scores or risk scores for particular species, life processes, or stressors.
+
+**Tabular Outputs Structure**:
+     
+```r
+'data.frame':   n obs. of  5 variables:
+$ cell         : numeric  # Unique cell ID `x`
+$ species      : numeric  # Species ID `Sp`
+$ life_process : numeric  # Life process ID `L`
+$ stressor     : numeric  # Stressor ID `S`
+$ risk         : numeric  # Risk score `R_c` from stressor `i` for species `j` and life process `k` in cell `x`
+```
+
+**Use Cases**:
+  - **Spatial Risk Mapping**: Identify geographic areas with the highest or lowest cumulative risks.
+  - **Hotspot Detection**: Pinpoint regions requiring urgent management or protection efforts.
+  - **Route Optimization**: Select low-risk routes for interventions like navigation or infrastructure placement.
+
+#### Spatio-Temporal Outputs
+
+For comprehensive analyses, the framework generates spatio-temporal outputs, integrating risk scores across both spatial and temporal dimensions. The outputs of these types of assessment provide dynamic spatial risk maps of aggregated cumulative risk scores or risk scores for particular species, life processes, or stressors that highlights cumulative risks over time and space in an area of interest.
+
+
+**Tabular Outputs Structure**:
+
+```r
+'data.frame':   n obs. of  6 variables:
+$ cell         : numeric  # Unique cell ID `x`
+$ date         : Date, format: "2024-01-01"  # Datetime `t`
+$ species      : numeric  # Species ID `Sp`
+$ life_process : numeric  # Life process ID `L`
+$ stressor     : numeric  # Stressor ID `S`
+$ risk         : numeric  # Risk score `R_c` from stressor `i` for species `j`, and life process `k` at time `t` and in cell `x`
+```
+
+**Use Cases**:
+  - **Space-Time Optimization**: Identify optimal periods and locations for interventions with minimal or maximal risks.
+  - **Risk Dynamics Analysis**: Evaluate how risks vary spatially and temporally to prioritize management actions.
+  - **Integrated Decision Support**: Combine spatial and temporal insights for holistic ecosystem management.
+
+
+
+## Space-Time Optimization
+
+This section of the project focuses on identifying optimal periods and/or spatial locations for human or management interventions based on the outputs of cumulative risk assessments. The goal is to optimize decision-making by analyzing risks across time, space, or both, tailored to the context of integrated ecosystem management. 
+
+Space-time optimization supports two primary objectives:
+
+1. **Minimizing Risk (Human Interventions):** Identifying time and/or locations where planned activities will have the least impact on ecosystems.
+2. **Maximizing Risk (Management Interventions):** Pinpointing time and/or locations where management actions should focus to address the highest risks.
+
+These objectives provide flexibility for diverse use cases, such as selecting low-impact periods for construction projects or targeting conservation efforts in risk hotspots.
+
+The tool provides three optimization dimensions: 
+
+1. **Time:** For strictly temporal assessments, the optimization identifies periods of minimal or maximal cumulative risk based on the planned duration of activities. If activities can be split into smaller chunks, the tool also accounts for chunk sizes and identifies non-contiguous periods of low or high risk.
+2. **Space:** For spatial optimization, the focus is on identifying geographic areas that minimize or maximize cumulative risk scores, depending on the objective.
+3. **Space-Time:** This integrates both temporal and spatial dimensions, finding regions and periods that jointly minimize or maximize cumulative risks.
+
+The following table summarizes potential approaches and tools for optimizing time, space, and space-time windows:
+
+
+| **Dimension**  | **Objective**          | **Approach**                                              | **Tools/Algorithms**                                                                 |
+|-----------------|------------------------|----------------------------------------------------------|-------------------------------------------------------------------------------------|
+| **Time**        | Minimize or Maximize   | - Sliding window for rolling sums over cumulative risk.  <br>- Dynamic programming for splitting periods. | - `rollapply` (zoo) for flexibility. <br>- `RcppRoll` for high-performance rolling operations. <br>- Dynamic programming for complex constraints. |
+| **Space**       | Minimize or Maximize   | - Risk surface analysis to identify low/high-risk areas. <br>- Pathfinding for optimal routes in low-risk areas. | - `terra` for raster operations. <br>- `igraph` for graph-based traversal (e.g., Dijkstra’s or A*). |
+| **Space-Time**  | Minimize or Maximize   | - Spatio-temporal clustering to identify contiguous low/high-risk regions. <br>- Optimization frameworks for dynamic spatio-temporal allocation. | - DBSCAN for clustering. <br>- `lpSolve` or `ompr` for optimization frameworks. |
+
+
+Here are the potential outputs for each optimization dimension:
+
+- **Time Optimization**: A ranked list or table of time periods with the lowest or highest cumulative risk scores for a specified duration or chunk size.
+- **Space Optimization**: Raster or vector maps highlighting areas with minimal or maximal cumulative risks, including options for identifying routes or spatial clusters.
+- **Space-Time Optimization**: Combined outputs presenting optimal spatio-temporal windows, such as maps with interactive overlays or animations showing risk dynamics over time.
+
+

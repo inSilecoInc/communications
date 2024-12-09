@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: Risk-based timing windows calculator
+  subtitle: Project description
+  author: 
+    - name: David Beauchesne
+      degrees: PhD
+    - name: Kevin Cazelles
+      degrees: PhD
+  chapters:
+    - index.qmd
+    - background_tw.Qmd
+    - background.Qmd
+    - methods.Qmd
+    - fictitious_examples.Qmd
+    - case_study.Qmd
+    - lake_example.Qmd
+
+bibliography: references.bib
+csl: nature.csl
+
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+
+execute:
+  warning: false
+  error: false
+  freeze: auto

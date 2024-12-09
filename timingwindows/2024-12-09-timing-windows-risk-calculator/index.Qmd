@@ -1,0 +1,25 @@
+---
+title: "Project description"
+---
+
+## Outline
+
+1. Introduction
+   - Description: Introduce the importance of cumulative risk assessments (CEAs) for ecosystem-based management and the challenges in operationalizing them for decision-making. Highlight the dual objectives of minimizing risks from human interventions and maximizing outcomes from management interventions. State the novelty of a spatio-temporal risk-based framework for optimizing interventions.
+2. Background
+   - Description: Provide an overview of CEAs, risk-based frameworks, and their applications. Discuss existing challenges in integrating spatial and temporal dimensions in risk assessments. Include examples of previous applications and highlight the research gaps this work addresses.
+3. Methods
+   - Description: Outline the cumulative risk assessment framework, including the mathematical model and its components. Detail data requirements for applying the model, covering stressors, species, life processes, and sensitivities. Include the operational workflow for generating outputs and optimizing interventions in space, time, or space-time.
+4. Fictitious Examples
+   - Description: Present two fictitious examples to illustrate the framework:
+     1. Freshwater Stream: Lake trout, yellow perch, and cisco with stressors from dredging and agricultural runoff.
+     2. Boreal Forest: Woodland caribou and moose with stressors from forestry and road disturbances.
+   - Highlight how cumulative risks are calculated and outputs are used to identify optimal interventions.
+5. Case Study
+   - Description: Showcase a simplified real-world application of the framework using openly available data. Focus on either spatial or temporal optimization (not both) to demonstrate the framework’s practicality. Provide details on the selected ecosystem, species, stressors, and the resulting outputs.
+6. Results
+   - Description: Present the outputs from the fictitious examples and case study. For the fictitious examples, include cumulative risk maps or tables illustrating optimal timing windows and spatial hotspots. For the case study, include specific insights gained from the real-world data.
+7. Discussion
+   - Description: Discuss the broader implications of the framework for ecosystem-based management. Highlight its versatility in addressing diverse challenges, from minimizing human impacts to prioritizing conservation efforts. Compare findings to previous studies and frameworks. Address limitations, such as data availability and computational requirements.
+8. Conclusion
+   - Description: Summarize the key findings and contributions of the framework. Reiterate its dual focus on optimizing human and management interventions. Suggest future research directions, including expanding the framework to fully integrate spatio-temporal dynamics.

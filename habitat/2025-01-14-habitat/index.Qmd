@@ -1,0 +1,51 @@
+---
+title: "Habitat"
+author: "Kevin Cazelles, David Beauchesne & Steve Vissault"
+date: "2025-01-14"
+from: markdown+emoji
+format: 
+  revealjs:
+    theme: serif
+    slide-number: true
+    transition: fade
+    css: styles.css
+    incremental: false
+    toc: false
+    toc-depth: 2
+---
+
+::: {style="text-align: center;"}
+# inSileco & Habitat
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="130"></div>
+  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="130"></div>
+</div>
+**Kevin Cazelles, David Beauchesne & Steve Vissault**
+
+*2025-01-14*
+:::
+
+
+---
+
+## [inSileco](https://insileco.io/){target="_blank"}
+
+::: {style="text-align: center;"}
+[![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
+:::
+
+
+---
+
+## Offre de service
+
+1. Education
+2. 
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Thank you!
+:::
+

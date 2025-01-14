@@ -1,0 +1,1753 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="816pt"
+   height="486pt"
+   viewBox="0.00 0.00 815.89 486.00"
+   version="1.1"
+   id="svg1393"
+   sodipodi:docname="diagram_db.svg"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)">
+  <metadata
+     id="metadata1399">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1397" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1792"
+     inkscape:window-height="1067"
+     id="namedview1395"
+     showgrid="false"
+     inkscape:zoom="0.58455882"
+     inkscape:cx="309.63522"
+     inkscape:cy="289.78616"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1393" />
+  <g
+     id="graph0"
+     class="graph"
+     transform="scale(1 1) rotate(0) translate(4 482)"
+     inkscape:export-xdpi="196"
+     inkscape:export-ydpi="196">
+    <title
+       id="title833">%0</title>
+    <g
+       id="a_graph0">
+      <a
+         xlink:title="Data Model"
+         id="a837">
+        <polygon
+           fill="#ffffff"
+           stroke="transparent"
+           points="-4,4 -4,-482 811.8926,-482 811.8926,4 -4,4"
+           id="polygon835" />
+      </a>
+    </g>
+    <!-- life_processes -->
+    <g
+       id="life_processes"
+       class="node">
+      <title
+         id="title840">life_processes</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="32.3926,-199 32.3926,-219 142.3926,-219 142.3926,-199 32.3926,-199"
+         id="polygon842" />
+      <text
+         text-anchor="start"
+         x="47.7453"
+         y="-204.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text844">life_processes</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="32.3926,-179 32.3926,-199 121.3926,-199 121.3926,-179 32.3926,-179"
+         id="polygon846" />
+      <text
+         text-anchor="start"
+         x="34.1296"
+         y="-185.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text848">life_process_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="121.3926,-179 121.3926,-199 142.3926,-199 142.3926,-179 121.3926,-179"
+         id="polygon850" />
+      <text
+         text-anchor="start"
+         x="122.955"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text852">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="32.3926,-159 32.3926,-179 121.3926,-179 121.3926,-159 32.3926,-159"
+         id="polygon854" />
+      <text
+         text-anchor="start"
+         x="34.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text856">name</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="121.3926,-159 121.3926,-179 142.3926,-179 142.3926,-159 121.3926,-159"
+         id="polygon858" />
+      <text
+         text-anchor="start"
+         x="122.955"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text860">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="32.3926,-139 32.3926,-159 121.3926,-159 121.3926,-139 32.3926,-139"
+         id="polygon862" />
+      <text
+         text-anchor="start"
+         x="34.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text864">description</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="121.3926,-139 121.3926,-159 142.3926,-159 142.3926,-139 121.3926,-139"
+         id="polygon866" />
+      <text
+         text-anchor="start"
+         x="122.955"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text868">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="31.3926,-138 31.3926,-220 143.3926,-220 143.3926,-138 31.3926,-138"
+         id="polygon870" />
+    </g>
+    <!-- species -->
+    <g
+       id="species"
+       class="node">
+      <title
+         id="title873">species</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="318.3926,-457 318.3926,-477 430.3926,-477 430.3926,-457 318.3926,-457"
+         id="polygon875" />
+      <text
+         text-anchor="start"
+         x="354.1808"
+         y="-462.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text877">species</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-437 318.3926,-457 409.3926,-457 409.3926,-437 318.3926,-437"
+         id="polygon879" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-443.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text881">species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-437 409.3926,-457 430.3926,-457 430.3926,-437 409.3926,-437"
+         id="polygon883" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-442.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text885">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-417 318.3926,-437 409.3926,-437 409.3926,-417 318.3926,-417"
+         id="polygon887" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-422.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text889">vernacular</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-417 409.3926,-437 430.3926,-437 430.3926,-417 409.3926,-417"
+         id="polygon891" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-422.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text893">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-397 318.3926,-417 409.3926,-417 409.3926,-397 318.3926,-397"
+         id="polygon895" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-402.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text897">kingdom</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-397 409.3926,-417 430.3926,-417 430.3926,-397 409.3926,-397"
+         id="polygon899" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-402.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text901">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-377 318.3926,-397 409.3926,-397 409.3926,-377 318.3926,-377"
+         id="polygon903" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-382.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text905">phylum</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-377 409.3926,-397 430.3926,-397 430.3926,-377 409.3926,-377"
+         id="polygon907" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-382.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text909">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-357 318.3926,-377 409.3926,-377 409.3926,-357 318.3926,-357"
+         id="polygon911" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-362.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text913">class</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-357 409.3926,-377 430.3926,-377 430.3926,-357 409.3926,-357"
+         id="polygon915" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-362.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text917">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-337 318.3926,-357 409.3926,-357 409.3926,-337 318.3926,-337"
+         id="polygon919" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-342.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text921">order</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-337 409.3926,-357 430.3926,-357 430.3926,-337 409.3926,-337"
+         id="polygon923" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-342.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text925">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-317 318.3926,-337 409.3926,-337 409.3926,-317 318.3926,-317"
+         id="polygon927" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-322.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text929">family</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-317 409.3926,-337 430.3926,-337 430.3926,-317 409.3926,-317"
+         id="polygon931" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-322.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text933">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-297 318.3926,-317 409.3926,-317 409.3926,-297 318.3926,-297"
+         id="polygon935" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-302.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text937">genus</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-297 409.3926,-317 430.3926,-317 430.3926,-297 409.3926,-297"
+         id="polygon939" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-302.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text941">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-277 318.3926,-297 409.3926,-297 409.3926,-277 318.3926,-277"
+         id="polygon943" />
+      <text
+         text-anchor="start"
+         x="320.3926"
+         y="-282.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text945">species</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-277 409.3926,-297 430.3926,-297 430.3926,-277 409.3926,-277"
+         id="polygon947" />
+      <text
+         text-anchor="start"
+         x="410.955"
+         y="-282.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text949">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="318.3926,-257 318.3926,-277 409.3926,-277 409.3926,-257 318.3926,-257"
+         id="polygon951" />
+      <text
+         text-anchor="start"
+         x="319.9571"
+         y="-262.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text953">taxon_key_gbif</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="409.3926,-257 409.3926,-277 430.3926,-277 430.3926,-257 409.3926,-257"
+         id="polygon955" />
+      <text
+         text-anchor="start"
+         x="410.9473"
+         y="-262.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text957">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="317.3926,-256 317.3926,-478 431.3926,-478 431.3926,-256 317.3926,-256"
+         id="polygon959" />
+    </g>
+    <!-- species_stressor_sensitivity -->
+    <g
+       id="species_stressor_sensitivity"
+       class="node">
+      <title
+         id="title962">species_stressor_sensitivity</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="435.3926,-199 435.3926,-219 593.3926,-219 593.3926,-199 435.3926,-199"
+         id="polygon964" />
+      <text
+         text-anchor="start"
+         x="437.0223"
+         y="-204.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text966">species_stressor_sensitivity</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="435.3926,-179 435.3926,-199 535.3926,-199 535.3926,-179 435.3926,-179"
+         id="polygon968" />
+      <text
+         text-anchor="start"
+         x="437.3926"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text970">species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="535.3926,-179 535.3926,-199 593.3926,-199 593.3926,-179 535.3926,-179"
+         id="polygon972" />
+      <text
+         text-anchor="start"
+         x="537.3926"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text974">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="435.3926,-159 435.3926,-179 535.3926,-179 535.3926,-159 435.3926,-159"
+         id="polygon976" />
+      <text
+         text-anchor="start"
+         x="437.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text978">stressor_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="535.3926,-159 535.3926,-179 593.3926,-179 593.3926,-159 535.3926,-159"
+         id="polygon980" />
+      <text
+         text-anchor="start"
+         x="537.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text982">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="435.3926,-139 435.3926,-159 535.3926,-159 535.3926,-139 435.3926,-139"
+         id="polygon984" />
+      <text
+         text-anchor="start"
+         x="437.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text986">value</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="535.3926,-139 535.3926,-159 593.3926,-159 593.3926,-139 535.3926,-139"
+         id="polygon988" />
+      <text
+         text-anchor="start"
+         x="537.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text990">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="434.3926,-138 434.3926,-220 594.3926,-220 594.3926,-138 434.3926,-138"
+         id="polygon992" />
+    </g>
+    <!-- species_stressor_sensitivity&#45;&gt;species -->
+    <g
+       id="species_stressor_sensitivity_1"
+       class="edge">
+      <title
+         id="title995">species_stressor_sensitivity:species_id-&gt;species:species_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M435.3926,-189C420.7731,-189 434.8,-209.7329 424.3926,-220 388.9732,-254.9417 347.3701,-215.5555 318.3926,-256 307.6257,-271.0275 299.5132,-404.8059 311.6283,-439.0459"
+         id="path997" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="309.248,-441.6496 318.3926,-447 314.5805,-437.1147 309.248,-441.6496"
+         id="polygon999" />
+    </g>
+    <!-- stressors -->
+    <g
+       id="stressors"
+       class="node">
+      <title
+         id="title1002">stressors</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="613.3926,-387 613.3926,-407 700.3926,-407 700.3926,-387 613.3926,-387"
+         id="polygon1004" />
+      <text
+         text-anchor="start"
+         x="632.7902"
+         y="-392.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1006">stressors</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="613.3926,-367 613.3926,-387 679.3926,-387 679.3926,-367 613.3926,-367"
+         id="polygon1008" />
+      <text
+         text-anchor="start"
+         x="615.3926"
+         y="-373.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text1010">stressor_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-367 679.3926,-387 700.3926,-387 700.3926,-367 679.3926,-367"
+         id="polygon1012" />
+      <text
+         text-anchor="start"
+         x="680.955"
+         y="-372.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1014">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="613.3926,-347 613.3926,-367 679.3926,-367 679.3926,-347 613.3926,-347"
+         id="polygon1016" />
+      <text
+         text-anchor="start"
+         x="615.3926"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1018">name</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-347 679.3926,-367 700.3926,-367 700.3926,-347 679.3926,-347"
+         id="polygon1020" />
+      <text
+         text-anchor="start"
+         x="680.955"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1022">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="613.3926,-327 613.3926,-347 679.3926,-347 679.3926,-327 613.3926,-327"
+         id="polygon1024" />
+      <text
+         text-anchor="start"
+         x="615.2895"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1026">description</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-327 679.3926,-347 700.3926,-347 700.3926,-327 679.3926,-327"
+         id="polygon1028" />
+      <text
+         text-anchor="start"
+         x="680.955"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1030">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="611.8926,-326 611.8926,-408 700.8926,-408 700.8926,-326 611.8926,-326"
+         id="polygon1032" />
+    </g>
+    <!-- species_stressor_sensitivity&#45;&gt;stressors -->
+    <g
+       id="species_stressor_sensitivity_2"
+       class="edge">
+      <title
+         id="title1035">species_stressor_sensitivity:stressor_id-&gt;stressors:stressor_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M435.3926,-169C424.0592,-169 428.4479,-211.0437 435.3926,-220 474.7605,-270.7718 528.7844,-211.7814 575.3926,-256 613.4096,-292.0679 564.8634,-365.6546 603.1425,-375.8244"
+         id="path1037" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="603.0589,-379.3377 613.3926,-377 603.8565,-372.3833 603.0589,-379.3377"
+         id="polygon1039" />
+    </g>
+    <!-- species_traits -->
+    <g
+       id="species_traits"
+       class="node">
+      <title
+         id="title1042">species_traits</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="332.3926,-199 332.3926,-219 415.3926,-219 415.3926,-199 332.3926,-199"
+         id="polygon1044" />
+      <text
+         text-anchor="start"
+         x="336.185"
+         y="-204.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1046">species_traits</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="332.3926,-179 332.3926,-199 394.3926,-199 394.3926,-179 332.3926,-179"
+         id="polygon1048" />
+      <text
+         text-anchor="start"
+         x="334.2355"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1050">species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="394.3926,-179 394.3926,-199 415.3926,-199 415.3926,-179 394.3926,-179"
+         id="polygon1052" />
+      <text
+         text-anchor="start"
+         x="395.955"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1054">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="332.3926,-159 332.3926,-179 394.3926,-179 394.3926,-159 332.3926,-159"
+         id="polygon1056" />
+      <text
+         text-anchor="start"
+         x="334.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1058">trait_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="394.3926,-159 394.3926,-179 415.3926,-179 415.3926,-159 394.3926,-159"
+         id="polygon1060" />
+      <text
+         text-anchor="start"
+         x="395.955"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1062">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="332.3926,-139 332.3926,-159 394.3926,-159 394.3926,-139 332.3926,-139"
+         id="polygon1064" />
+      <text
+         text-anchor="start"
+         x="334.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1066">value</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="394.3926,-139 394.3926,-159 415.3926,-159 415.3926,-139 394.3926,-139"
+         id="polygon1068" />
+      <text
+         text-anchor="start"
+         x="395.9473"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1070">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="330.8926,-138 330.8926,-220 415.8926,-220 415.8926,-138 330.8926,-138"
+         id="polygon1072" />
+    </g>
+    <!-- species_traits&#45;&gt;species -->
+    <g
+       id="species_traits_1"
+       class="edge">
+      <title
+         id="title1075">species_traits:species_id-&gt;species:species_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M332.3926,-189C324.7873,-189 319.1745,-248.4351 318.3926,-256 316.4919,-274.3886 301.799,-405.6724 312.0703,-439.2135"
+         id="path1077" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="309.372,-441.443 318.3926,-447 314.8063,-437.0306 309.372,-441.443"
+         id="polygon1079" />
+    </g>
+    <!-- traits -->
+    <g
+       id="traits"
+       class="node">
+      <title
+         id="title1082">traits</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="479.3926,-387 479.3926,-407 566.3926,-407 566.3926,-387 479.3926,-387"
+         id="polygon1084" />
+      <text
+         text-anchor="start"
+         x="508.8968"
+         y="-392.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1086">traits</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="479.3926,-367 479.3926,-387 545.3926,-387 545.3926,-367 479.3926,-367"
+         id="polygon1088" />
+      <text
+         text-anchor="start"
+         x="481.3926"
+         y="-373.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text1090">trait_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="545.3926,-367 545.3926,-387 566.3926,-387 566.3926,-367 545.3926,-367"
+         id="polygon1092" />
+      <text
+         text-anchor="start"
+         x="546.955"
+         y="-372.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1094">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="479.3926,-347 479.3926,-367 545.3926,-367 545.3926,-347 479.3926,-347"
+         id="polygon1096" />
+      <text
+         text-anchor="start"
+         x="481.3926"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1098">name</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="545.3926,-347 545.3926,-367 566.3926,-367 566.3926,-347 545.3926,-347"
+         id="polygon1100" />
+      <text
+         text-anchor="start"
+         x="546.955"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1102">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="479.3926,-327 479.3926,-347 545.3926,-347 545.3926,-327 479.3926,-327"
+         id="polygon1104" />
+      <text
+         text-anchor="start"
+         x="481.2895"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1106">description</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="545.3926,-327 545.3926,-347 566.3926,-347 566.3926,-327 545.3926,-327"
+         id="polygon1108" />
+      <text
+         text-anchor="start"
+         x="546.955"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1110">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="477.8926,-326 477.8926,-408 566.8926,-408 566.8926,-326 477.8926,-326"
+         id="polygon1112" />
+    </g>
+    <!-- species_traits&#45;&gt;traits -->
+    <g
+       id="species_traits_2"
+       class="edge">
+      <title
+         id="title1115">species_traits:trait_id-&gt;traits:trait_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M332.3926,-169C321.0592,-169 325.7659,-210.8059 332.3926,-220 361.9768,-261.046 404.7939,-220.0454 440.3926,-256 477.3512,-293.3282 430.4624,-365.8319 469.0881,-375.8431"
+         id="path1117" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="469.0645,-379.3624 479.3926,-377 469.8455,-372.4061 469.0645,-379.3624"
+         id="polygon1119" />
+    </g>
+    <!-- stressors_traits -->
+    <g
+       id="stressors_traits"
+       class="node">
+      <title
+         id="title1122">stressors_traits</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="614.3926,-199 614.3926,-219 701.3926,-219 701.3926,-199 614.3926,-199"
+         id="polygon1124" />
+      <text
+         text-anchor="start"
+         x="616.2944"
+         y="-204.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1126">stressors_traits</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="614.3926,-179 614.3926,-199 679.3926,-199 679.3926,-179 614.3926,-179"
+         id="polygon1128" />
+      <text
+         text-anchor="start"
+         x="616.3926"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1130">stressor_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-179 679.3926,-199 701.3926,-199 701.3926,-179 679.3926,-179"
+         id="polygon1132" />
+      <text
+         text-anchor="start"
+         x="681.3926"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1134">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="614.3926,-159 614.3926,-179 679.3926,-179 679.3926,-159 614.3926,-159"
+         id="polygon1136" />
+      <text
+         text-anchor="start"
+         x="616.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1138">trait_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-159 679.3926,-179 701.3926,-179 701.3926,-159 679.3926,-159"
+         id="polygon1140" />
+      <text
+         text-anchor="start"
+         x="681.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1142">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="614.3926,-139 614.3926,-159 679.3926,-159 679.3926,-139 614.3926,-139"
+         id="polygon1144" />
+      <text
+         text-anchor="start"
+         x="616.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1146">value</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="679.3926,-139 679.3926,-159 701.3926,-159 701.3926,-139 679.3926,-139"
+         id="polygon1148" />
+      <text
+         text-anchor="start"
+         x="681.3926"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1150">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="612.8926,-138 612.8926,-220 701.8926,-220 701.8926,-138 612.8926,-138"
+         id="polygon1152" />
+    </g>
+    <!-- stressors_traits&#45;&gt;stressors -->
+    <g
+       id="stressors_traits_1"
+       class="edge">
+      <title
+         id="title1155">stressors_traits:stressor_id-&gt;stressors:stressor_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M614.3926,-189C605.376,-189 603.398,-329.1078 609.7453,-367.4186"
+         id="path1157" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="606.5639,-368.8994 613.3926,-377 613.106,-366.409 606.5639,-368.8994"
+         id="polygon1159" />
+    </g>
+    <!-- stressors_traits&#45;&gt;traits -->
+    <g
+       id="stressors_traits_2"
+       class="edge">
+      <title
+         id="title1162">stressors_traits:trait_id-&gt;traits:trait_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M614.3926,-169C591.2047,-169 615.2738,-200.0873 603.3926,-220 566.2427,-282.2622 509.7323,-260.1502 479.3926,-326 471.8341,-342.405 461.9284,-365.05 469.6859,-373.5727"
+         id="path1164" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="468.7978,-376.9708 479.3926,-377 471.1284,-370.3702 468.7978,-376.9708"
+         id="polygon1166" />
+    </g>
+    <!-- waterbodies -->
+    <g
+       id="waterbodies"
+       class="node">
+      <title
+         id="title1169">waterbodies</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="183.3926,-407 183.3926,-427 293.3926,-427 293.3926,-407 183.3926,-407"
+         id="polygon1171" />
+      <text
+         text-anchor="start"
+         x="204.5742"
+         y="-412.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1173">waterbodies</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="183.3926,-387 183.3926,-407 272.3926,-407 272.3926,-387 183.3926,-387"
+         id="polygon1175" />
+      <text
+         text-anchor="start"
+         x="185.3926"
+         y="-393.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text1177">waterbody_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="272.3926,-387 272.3926,-407 293.3926,-407 293.3926,-387 272.3926,-387"
+         id="polygon1179" />
+      <text
+         text-anchor="start"
+         x="273.955"
+         y="-392.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1181">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="183.3926,-367 183.3926,-387 272.3926,-387 272.3926,-367 183.3926,-367"
+         id="polygon1183" />
+      <text
+         text-anchor="start"
+         x="185.3926"
+         y="-372.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1185">name</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="272.3926,-367 272.3926,-387 293.3926,-387 293.3926,-367 272.3926,-367"
+         id="polygon1187" />
+      <text
+         text-anchor="start"
+         x="273.955"
+         y="-372.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1189">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="183.3926,-347 183.3926,-367 272.3926,-367 272.3926,-347 183.3926,-347"
+         id="polygon1191" />
+      <text
+         text-anchor="start"
+         x="185.3926"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1193">province</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="272.3926,-347 272.3926,-367 293.3926,-367 293.3926,-347 272.3926,-347"
+         id="polygon1195" />
+      <text
+         text-anchor="start"
+         x="273.955"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1197">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="183.3926,-327 183.3926,-347 272.3926,-347 272.3926,-327 183.3926,-327"
+         id="polygon1199" />
+      <text
+         text-anchor="start"
+         x="185.3926"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1201">area_km2</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="272.3926,-327 272.3926,-347 293.3926,-347 293.3926,-327 272.3926,-327"
+         id="polygon1203" />
+      <text
+         text-anchor="start"
+         x="273.9473"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1205">dbl</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="183.3926,-307 183.3926,-327 272.3926,-327 272.3926,-307 183.3926,-307"
+         id="polygon1207" />
+      <text
+         text-anchor="start"
+         x="185.1289"
+         y="-312.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1209">perimeter_km2</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="272.3926,-307 272.3926,-327 293.3926,-327 293.3926,-307 272.3926,-307"
+         id="polygon1211" />
+      <text
+         text-anchor="start"
+         x="273.9473"
+         y="-312.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1213">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="182.3926,-306 182.3926,-428 294.3926,-428 294.3926,-306 182.3926,-306"
+         id="polygon1215" />
+    </g>
+    <!-- waterbodies_species -->
+    <g
+       id="waterbodies_species"
+       class="node">
+      <title
+         id="title1218">waterbodies_species</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="163.3926,-199 163.3926,-219 312.3926,-219 312.3926,-199 163.3926,-199"
+         id="polygon1220" />
+      <text
+         text-anchor="start"
+         x="180.3624"
+         y="-204.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1222">waterbodies_species</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="163.3926,-179 163.3926,-199 291.3926,-199 291.3926,-179 163.3926,-179"
+         id="polygon1224" />
+      <text
+         text-anchor="start"
+         x="165.3926"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1226">waterbody_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="291.3926,-179 291.3926,-199 312.3926,-199 312.3926,-179 291.3926,-179"
+         id="polygon1228" />
+      <text
+         text-anchor="start"
+         x="292.955"
+         y="-184.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1230">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="163.3926,-159 163.3926,-179 291.3926,-179 291.3926,-159 163.3926,-159"
+         id="polygon1232" />
+      <text
+         text-anchor="start"
+         x="165.3926"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1234">species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="291.3926,-159 291.3926,-179 312.3926,-179 312.3926,-159 291.3926,-159"
+         id="polygon1236" />
+      <text
+         text-anchor="start"
+         x="292.955"
+         y="-164.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1238">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="163.3926,-139 163.3926,-159 291.3926,-159 291.3926,-139 163.3926,-139"
+         id="polygon1240" />
+      <text
+         text-anchor="start"
+         x="165.192"
+         y="-145.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text1242">waterbody_species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="291.3926,-139 291.3926,-159 312.3926,-159 312.3926,-139 291.3926,-139"
+         id="polygon1244" />
+      <text
+         text-anchor="start"
+         x="292.955"
+         y="-144.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1246">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="161.8926,-138 161.8926,-220 312.8926,-220 312.8926,-138 161.8926,-138"
+         id="polygon1248" />
+    </g>
+    <!-- waterbodies_species&#45;&gt;species -->
+    <g
+       id="waterbodies_species_1"
+       class="edge">
+      <title
+         id="title1251">waterbodies_species:species_id-&gt;species:species_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M163.3926,-169C152.0592,-169 156.4479,-211.0437 163.3926,-220 202.7605,-270.7718 262.0658,-206.8095 303.3926,-256 315.3207,-270.1979 301.6968,-404.592 312.057,-439.0046"
+         id="path1253" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="309.4388,-441.336 318.3926,-447 314.9252,-436.9886 309.4388,-441.336"
+         id="polygon1255" />
+    </g>
+    <!-- waterbodies_species&#45;&gt;waterbodies -->
+    <g
+       id="waterbodies_species_2"
+       class="edge">
+      <title
+         id="title1258">waterbodies_species:waterbody_id-&gt;waterbodies:waterbody_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M163.3926,-189C142.7143,-189 156.3169,-353.9883 175.9421,-390.0795"
+         id="path1260" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="173.6837,-392.7587 183.3926,-397 178.4477,-387.6299 173.6837,-392.7587"
+         id="polygon1262" />
+    </g>
+    <!-- waterbodies_species_life_processes -->
+    <g
+       id="waterbodies_species_life_processes"
+       class="node">
+      <title
+         id="title1265">waterbodies_species_life_processes</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="73.3926,-81 73.3926,-101 278.3926,-101 278.3926,-81 73.3926,-81"
+         id="polygon1267" />
+      <text
+         text-anchor="start"
+         x="75.2151"
+         y="-86.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1269">waterbodies_species_life_processes</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="73.3926,-61 73.3926,-81 229.3926,-81 229.3926,-61 73.3926,-61"
+         id="polygon1271" />
+      <text
+         text-anchor="start"
+         x="75.3926"
+         y="-66.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1273">waterbody_species_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="229.3926,-61 229.3926,-81 278.3926,-81 278.3926,-61 229.3926,-61"
+         id="polygon1275" />
+      <text
+         text-anchor="start"
+         x="231.3926"
+         y="-66.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1277">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="73.3926,-41 73.3926,-61 229.3926,-61 229.3926,-41 73.3926,-41"
+         id="polygon1279" />
+      <text
+         text-anchor="start"
+         x="75.3926"
+         y="-46.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1281">life_process_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="229.3926,-41 229.3926,-61 278.3926,-61 278.3926,-41 229.3926,-41"
+         id="polygon1283" />
+      <text
+         text-anchor="start"
+         x="231.3926"
+         y="-46.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1285">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="73.3926,-21 73.3926,-41 229.3926,-41 229.3926,-21 73.3926,-21"
+         id="polygon1287" />
+      <text
+         text-anchor="start"
+         x="75.3926"
+         y="-26.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1289">start</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="229.3926,-21 229.3926,-41 278.3926,-41 278.3926,-21 229.3926,-21"
+         id="polygon1291" />
+      <text
+         text-anchor="start"
+         x="231.3926"
+         y="-26.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1293">dbl</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="73.3926,-1 73.3926,-21 229.3926,-21 229.3926,-1 73.3926,-1"
+         id="polygon1295" />
+      <text
+         text-anchor="start"
+         x="75.3926"
+         y="-6.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1297">end</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="229.3926,-1 229.3926,-21 278.3926,-21 278.3926,-1 229.3926,-1"
+         id="polygon1299" />
+      <text
+         text-anchor="start"
+         x="231.3926"
+         y="-6.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1301">dbl</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="71.8926,0 71.8926,-102 278.8926,-102 278.8926,0 71.8926,0"
+         id="polygon1303" />
+    </g>
+    <!-- waterbodies_species_life_processes&#45;&gt;life_processes -->
+    <g
+       id="waterbodies_species_life_processes_1"
+       class="edge">
+      <title
+         id="title1306">waterbodies_species_life_processes:life_process_id-&gt;life_processes:life_process_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M73.3926,-51C13.1586,-51 -26.7069,-173.3019 22.2104,-187.6342"
+         id="path1308" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="22.016,-191.1394 32.3926,-189 22.9467,-184.2015 22.016,-191.1394"
+         id="polygon1310" />
+    </g>
+    <!-- waterbodies_species_life_processes&#45;&gt;waterbodies_species -->
+    <g
+       id="waterbodies_species_life_processes_2"
+       class="edge">
+      <title
+         id="title1313">waterbodies_species_life_processes:waterbody_species_id-&gt;waterbodies_species:waterbody_species_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M73.3926,-71C59.6148,-71 65.939,-90.4124 73.3926,-102 94.2664,-134.4511 120.6892,-116.0072 152.3926,-138 153.9903,-139.1084 155.0125,-140.4634 155.8104,-141.8387"
+         id="path1315" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="153.7193,-144.678 163.3926,-149 158.5259,-139.589 153.7193,-144.678"
+         id="polygon1317" />
+    </g>
+    <!-- wua -->
+    <g
+       id="wua"
+       class="node">
+      <title
+         id="title1320">wua</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="720.3926,-387 720.3926,-407 807.3926,-407 807.3926,-387 720.3926,-387"
+         id="polygon1322" />
+      <text
+         text-anchor="start"
+         x="752.232"
+         y="-392.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1324">wua</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="720.3926,-367 720.3926,-387 786.3926,-387 786.3926,-367 720.3926,-367"
+         id="polygon1326" />
+      <text
+         text-anchor="start"
+         x="722.3926"
+         y="-373.4"
+         font-family="Times,serif"
+         text-decoration="underline"
+         font-size="14.00"
+         fill="#444444"
+         id="text1328">wua_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="786.3926,-367 786.3926,-387 807.3926,-387 807.3926,-367 786.3926,-367"
+         id="polygon1330" />
+      <text
+         text-anchor="start"
+         x="787.955"
+         y="-372.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1332">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="720.3926,-347 720.3926,-367 786.3926,-367 786.3926,-347 720.3926,-347"
+         id="polygon1334" />
+      <text
+         text-anchor="start"
+         x="722.3926"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1336">name</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="786.3926,-347 786.3926,-367 807.3926,-367 807.3926,-347 786.3926,-347"
+         id="polygon1338" />
+      <text
+         text-anchor="start"
+         x="787.955"
+         y="-352.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1340">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="720.3926,-327 720.3926,-347 786.3926,-347 786.3926,-327 720.3926,-327"
+         id="polygon1342" />
+      <text
+         text-anchor="start"
+         x="722.2895"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1344">description</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="786.3926,-327 786.3926,-347 807.3926,-347 807.3926,-327 786.3926,-327"
+         id="polygon1346" />
+      <text
+         text-anchor="start"
+         x="787.955"
+         y="-332.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1348">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="718.8926,-326 718.8926,-408 807.8926,-408 807.8926,-326 718.8926,-326"
+         id="polygon1350" />
+    </g>
+    <!-- wua_stressors -->
+    <g
+       id="wua_stressors"
+       class="node">
+      <title
+         id="title1353">wua_stressors</title>
+      <polygon
+         fill="#efebdd"
+         stroke="transparent"
+         points="721.3926,-189 721.3926,-209 806.3926,-209 806.3926,-189 721.3926,-189"
+         id="polygon1355" />
+      <text
+         text-anchor="start"
+         x="724.6296"
+         y="-194.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#000000"
+         id="text1357">wua_stressors</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="721.3926,-169 721.3926,-189 785.3926,-189 785.3926,-169 721.3926,-169"
+         id="polygon1359" />
+      <text
+         text-anchor="start"
+         x="723.3926"
+         y="-174.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1361">wua_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="785.3926,-169 785.3926,-189 806.3926,-189 806.3926,-169 785.3926,-169"
+         id="polygon1363" />
+      <text
+         text-anchor="start"
+         x="786.955"
+         y="-174.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1365">chr</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="721.3926,-149 721.3926,-169 785.3926,-169 785.3926,-149 721.3926,-149"
+         id="polygon1367" />
+      <text
+         text-anchor="start"
+         x="723.0672"
+         y="-154.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1369">stressor_id</text>
+      <polygon
+         fill="#ffffff"
+         stroke="transparent"
+         points="785.3926,-149 785.3926,-169 806.3926,-169 806.3926,-149 785.3926,-149"
+         id="polygon1371" />
+      <text
+         text-anchor="start"
+         x="786.955"
+         y="-154.4"
+         font-family="Times,serif"
+         font-size="14.00"
+         fill="#444444"
+         id="text1373">chr</text>
+      <polygon
+         fill="none"
+         stroke="#555555"
+         points="719.8926,-148 719.8926,-210 806.8926,-210 806.8926,-148 719.8926,-148"
+         id="polygon1375" />
+    </g>
+    <!-- wua_stressors&#45;&gt;stressors -->
+    <g
+       id="wua_stressors_1"
+       class="edge">
+      <title
+         id="title1378">wua_stressors:stressor_id-&gt;stressors:stressor_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M721.3926,-159C707.6184,-159 716.5045,-207.6561 710.3926,-220 682.0565,-277.2284 636.5176,-266.4747 613.3926,-326 606.8517,-342.8366 596.3418,-365.2254 603.8119,-373.6261"
+         id="path1380" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="602.7978,-376.9796 613.3926,-377 605.1229,-370.3771 602.7978,-376.9796"
+         id="polygon1382" />
+    </g>
+    <!-- wua_stressors&#45;&gt;wua -->
+    <g
+       id="wua_stressors_2"
+       class="edge">
+      <title
+         id="title1385">wua_stressors:wua_id-&gt;wua:wua_id</title>
+      <path
+         fill="none"
+         stroke="#555555"
+         d="M721.3926,-179C711.8534,-179 709.8345,-327.8988 716.64,-367.45"
+         id="path1387" />
+      <polygon
+         fill="#555555"
+         stroke="#555555"
+         points="713.4778,-368.9728 720.3926,-377 719.9929,-366.4127 713.4778,-368.9728"
+         id="polygon1389" />
+    </g>
+  </g>
+</svg>

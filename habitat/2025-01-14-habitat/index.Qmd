@@ -18,7 +18,7 @@ format:
 # inSileco & Habitat
 <div style="display: flex; justify-content: center; align-items: center;">
   <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="130"></div>
-  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="130"></div>
+  <div style="margin-left: 200px;"><img src="https://images.squarespace-cdn.com/content/v1/642b03cefb8ada280f4cdd20/7b2e12e3-ce15-42c9-be17-97ac8d6f7c8d/Habitat_logo_long_sloganUP_yellow.png?format=1500w" width="300"></div>
 </div>
 **Kevin Cazelles, David Beauchesne & Steve Vissault**
 
@@ -34,18 +34,40 @@ format:
 [![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
 :::
 
+---
+
+## Geospatial experience
+ 
+::: {style="font-size: 80%;"}
+- Education (Elise Filotas)
+- Geospatial data manipulation & analyses
+- Geospatial data managemnent
+  - STAC catalog, COG, parquet
+- Web interface & services (WMS, Shiny applications)
+  - Optimized and secure cloud-based data access
+  - Shiny application developement deployment
+- Cloud-based processes
+  - Automated data harvesting
+  - Analytical pipeline orchestration
+:::
 
 ---
 
-## Offre de service
+## Services
 
-1. Education
-2. 
+::: {style="font-size: 80%;"}
+1. **Consulting and Training**: Providing clients with training sessions to enhance their understanding and capabilities on latest geospatial technologies such as Cloud Optimized Geotiff or PostGIS.
 
+2. **Targeted Problem-Solving Support**: On-demand assistance to address specific challenges during infrastructure and workflow setup
+
+3. **Infrastructure and Workflow Setup**: Hands-on assistance to develop infrastructure and workflows using for instance Apache airflow, dagster (Cloud framework) or target (R framework) on your own cloud infrastructure.
+
+4. **End-to-End Infrastructure Implementation**: Building and delivering a fully functional infrastructure with production-ready workflows on your own cloud infrastructure.
+:::
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 ::: {data-background-color="#000000" style="text-align: center;"}
-# Thank you!
+# What are your needs?
 :::
 

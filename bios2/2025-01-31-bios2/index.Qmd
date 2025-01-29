@@ -1,0 +1,71 @@
+---
+title: "Bios2"
+author: "Kevin Cazelles, David Beauchesne & Steve Vissault"
+date: "2025-01-31"
+from: markdown+emoji
+format: 
+  revealjs:
+    theme: serif
+    slide-number: true
+    transition: fade
+    css: styles.css
+    incremental: false
+    toc: false
+    toc-depth: 2
+---
+
+## [inSileco](https://insileco.io/){target="_blank"}
+
+::: {style="text-align: center;"}
+[![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
+:::
+
+---
+
+## Who we are
+ 
+::: {style="font-size: 100%;"}
+[![](img/who-we-are.png){width=100%}](https://insileco.io/){target="_blank"}
+:::
+
+---
+
+## What we do
+ 
+::: {style="font-size: 100%;"}
+[![](img/what-we-do.png){width=100%}](https://insileco.io/){target="_blank"}
+:::
+
+
+---
+
+## Geospatial experience
+ 
+::: {style="font-size: 80%;"}
+- Education 
+- Geospatial data manipulation & analyses
+- Geospatial data managemnent
+  - STAC catalog, COG, parquet
+- Web interface & services (WMS, Shiny applications)
+  - Optimized and secure cloud-based data access
+  - Shiny application developement deployment
+- Cloud-based processes
+  - Automated data harvesting
+  - Analytical pipeline orchestration
+:::
+
+---
+
+## Services
+
+::: {style="font-size: 80%;"}
+1. **Consulting and Training**: Providing clients with training sessions to enhance their understanding and capabilities on latest geospatial technologies such as Cloud Optimized Geotiff or PostGIS.
+
+2. **Targeted Problem-Solving Support**: On-demand assistance to address specific challenges during infrastructure and workflow setup
+
+3. **Infrastructure and Workflow Setup**: Hands-on assistance to develop infrastructure and workflows using for instance Apache airflow, dagster (Cloud framework) or target (R framework) on your own cloud infrastructure.
+
+4. **End-to-End Infrastructure Implementation**: Building and delivering a fully functional infrastructure with production-ready workflows on your own cloud infrastructure.
+:::
+
+

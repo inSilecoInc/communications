@@ -1,0 +1,475 @@
+---
+title: "Timing Windows Calculator"
+author: "Kevin Cazelles, David Beauchesne & Kevin McCann"
+date: "2025-02-27"
+from: markdown+emoji
+format: 
+  revealjs:
+    theme: serif
+    slide-number: true
+    transition: fade
+    css: styles.css
+    incremental: false
+    toc: false
+    toc-depth: 2
+---
+
+::: {style="text-align: center;"}
+# Timing Windows
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div><img src="img/hex-TWC.png" width="160"></div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="margin-left: 0px;"><img src="img/insileco_logo256.png" width="130"></div>
+  <div style="margin-left: 200px;"><img src="img/logo_cfem2.png" width="130"></div>
+</div>
+**Kevin Cazelles, David Beauchesne & Kevin McCann**
+
+*2025-02-27*
+:::
+
+
+---
+
+## [inSileco](https://insileco.io/){target="_blank"}
+
+::: {style="text-align: center;"}
+[![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
+:::
+
+
+---
+
+### Context
+
+:::: {.columns}
+
+:::
+
+::: {.column width="59%"}
+
+#### Timing windows are
+
+* mitigation measures
+* highly variable in Canada
+* designed for one or more species
+* based on: 
+  - timing of life processes
+  - vulnerability to WUA 
+  - environmental conditions
+
+:::
+
+::: {.column width="40%"}
+
+::: {style="text-align: center; margin-top: 100px"}
+![](img/timingwindow.png){width=100%}
+:::
+
+::: {style="font-size: 80%;"}
+
+<!-- - :book: [*Science advice on the use of timing windows as a mitigation measure*](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf), CSAS SAR 2022/047.
+- :book: Tuney et al. [*Science on the use of timing windows as a mitigation measure*](https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf) CSAS RD 2022/081 -->
+
+- :book: [CSAS RD 2022/081](https://publications.gc.ca/collections/collection_2023/mpo-dfo/fs70-5/Fs70-5-2022-081-eng.pdf)
+- :book: [CSAS SAR 2022/047](https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/41087707.pdf)
+
+:::
+
+::::
+
+
+---
+
+### Context
+
+#### Timing windows must
+
+* consider past and recent data
+* use a robust risk assessment framework
+* be highly adaptable
+* be transparent
+
+
+---
+
+### Context
+
+#### Objectives of this initiative
+
+::: {style="font-size: 90%;"}
+
+- Propose a **Risk Assessment Framework** to assess the risk posed by works, undertaking and activities (WUAs) on fish and fish habitat 
+
+- Initiate a **National Timing Windows Database** for Timing Windows assessments.
+
+- Design a **Timing Windows Calculator** to identify optimized timing windows for *in situ* interventions that minimize ecological risks
+
+:::
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Today's meeting
+:::
+
+---
+
+### Today's meeting
+
+*Goal: Presentation of the project and discussion of next steps.*
+
+<br> 
+
+#### Plan
+
+1. Risk Assessment Framework
+2. National Timing Windows Database
+3. Timing Windows Calculator
+4. Next steps
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Risk Assessment Framework
+:::
+
+---
+
+### Risk Assessment Framework
+
+::: {style="font-size: 80%;"}
+
+- **Establish Context**: Define the environmental context for each lake or river.
+- **Identify Risks**: Identify risks to fish life processes and habitats based on WUA pressures.
+- **Analyze Risks**: Analyze the risks based on available data and local species life processes.
+- **Evaluate Risks**: Evaluate the impact of risks on fish populations and habitats.
+- **Treat Risks**: Propose timing windows as mitigation measures to reduce exposure and vulnerability.
+
+:::
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# National Timing Windows Database 
+:::
+
+---
+
+### National Timing Windows Database
+
+#### Data-driven assessments
+
+<br>
+
+::: {style="text-align: center;"}
+![](img/tiered_approach2.png)
+:::
+
+---
+
+### National Timing Windows Database
+
+#### Harvesting and integration
+
+::: {style="font-size: 80%;"}
+1. Harvest open data at national/global scale
+2. Harvest *in situ* data
+3. Gap-fil missing knowledge
+
+<!-- [***Diagram***](https://insileco.atlassian.net/wiki/spaces/CON/whiteboard/225673217){target="_blank"} -->
+:::
+
+---
+
+### National Timing Windows Database
+
+#### Harvesting and integration
+
+::: {style="font-size: 80%;"}
+
+:::: {columns}
+
+::: {.column width="70%"}
+
+1. Harvest open data at national/global scale
+2. Harvest *in situ* data 
+3. Gap-fil / model missing knowledge 
+
+:::
+
+::: {.column width="20%"}
+✅ **Complete**
+
+⚠️ **Partial**
+
+⚠️ **Partial**
+:::
+::::
+
+<!-- [***Diagram***](https://insileco.atlassian.net/wiki/spaces/CON/whiteboard/225673217){target="_blank"} -->
+:::
+
+
+---
+
+### National Timing Windows Database
+
+#### Data sources overview
+::: {style="font-size: 70%;"}
+- Canadian watersheds {{< fa gears >}} [{{< fa database >}}](https://open.canada.ca/data/en/dataset/a4b190fe-e090-4e6d-881e-b87956c07977){target="_blank"}
+- Canadian lakes and rivers {{< fa gears >}} [{{< fa database >}}](https://open.canada.ca/data/en/dataset/e9931fc7-034c-52ad-91c5-6c64d4ba0065){target="_blank"} 
+- Species list (226 species) {{< fa gears >}} [{{< fa globe >}}](https://www.fishbase.se/country/CountryChecklist.php?what=list&trpp=50&c_code=124&csub_code=&cpresence=present&sortby=alpha2&vhabitat=fresh){target="_blank"}
+- Species occurrences (GBIF; ~850 000) {{< fa gears >}} [{{< fa globe >}}](https://www.gbif.org/){target="_blank"}
+- Species traits and phenology {{< fa gears >}} {{< fa hand >}} {{< fa book >}}
+  - FishBase {{< fa gears >}} {{< fa hand >}} [{{< fa globe >}}](https://www.fishbase.se/search.php){target="_blank"} [{{< fa book >}}](https://doi.org/10.1111/j.1095-8649.2012.03464.x){target="_blank"}
+  - Fishpass {{< fa gears >}} {{< fa hand >}} [{{< fa database >}}](https://doi.org/10.5061/dryad.fqz612jwj){target="_blank"}
+  - The North American Freshwater Migratory Fish Database {{< fa gears >}} {{< fa hand >}} [{{< fa book >}}](https://doi.org/10.1111/jbi.14367){target="_blank"} [{{< fa database >}}](https://doi.org/10.5066/P9WDLLP0){target="_blank"}
+  - Ontario Freshwater Fishes Life History Database {{< fa gears >}} {{< fa hand >}} [{{< fa globe >}}](https://www.ontariofishes.ca/home.htm){target="_blank"}
+  - Dahlke et al. (2020) Science {{< fa gears >}} {{< fa hand >}} [{{< fa book >}}](https://doi.org/10.1126/science.aaz3658){target="_blank"} [{{< fa database >}}](https://doi.org/10.1594/PANGAEA.917796){target="_blank"}
+  - Roberge et al. (2002) {{< fa hand >}} [{{< fa book >}}](https://publications.gc.ca/site/eng/9.562457/publication.html){target="_blank"}
+- Legislation for status quo {{< fa gears >}} {{< fa hand >}} [{{< fa globe >}}](https://www.dfo-mpo.gc.ca/pnw-ppe/timing-periodes/index-eng.html){target="_blank"}
+
+:::
+
+
+---
+
+### National Timing Windows Database
+
+#### Relational database (.sqlite)
+
+
+
+::: {style="text-align: center;"}
+[![](img/ntwd.png){width=100%}](img/ntwd.png){target="_blank"}
+:::
+
+::: {style="font-size: 70%;"}
+{{< fa warning >}} 26 tables
+:::
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Timing Windows Calculator
+:::
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# *Live demo*
+:::
+
+<!-- # [*Live demo*](https://01953ac4-d40b-b6fc-1e4b-65185e61061c.share.connect.posit.cloud/?private_link_token=Is4iD0dVvL2GNC3vrfy3PBd7jFGphmO5GQ2mQQyDnr9xe1IAuehCVHgwp7qOsvII){target="_blank"} -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Next steps
+:::
+
+---
+
+### Next steps
+
+#### Timing windows should be
+
+* based on best available knowledge
+* conceptually extended to include spatio-temporal data
+* conceptually extended to support stage-structured data
+* conceptually extended to community / food webs
+
+---
+
+### Next steps
+
+#### Strategy
+
+* Formalize the creation and updates of the National Timing Windows Database
+* Extend risk assessment to fully spatio-temporal cumulative risk assessment framework
+* Assess risk on stage-structured spatial food webs
+
+---
+
+### Next steps
+
+#### Strategy
+
+* **Formalize the creation and updates of the National Timing Windows Database**
+* **Extend risk assessment to fully spatio-temporal cumulative risk assessment framework**
+* Assess risk on stage-structured spatial food webs
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# National Timing Windows Database
+:::
+
+---
+
+### National Timing Windows Database
+
+- Expand data harvesting to include data that is not openly available
+- Include other life processes
+- Launch initiative to build a centralized and open database for the application of timing windows assessments across Canada
+- Ability for researchers / managers / assessers to submit new data 
+
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Cumulative risk assessment framework
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {style="font-size: 80%;"}
+- Waterbody ($W_x$)
+- Species ($Sp_i$)
+- Stressors ($St_j$) 
+- Sensitivity ($\mu_{i,j}$)
+:::
+
+:::
+
+::: {.column width="60%"}
+
+<br>
+$$TWR_{x,i,j} = \sum_i \sum_j Sp_{x,i} * St_{x,j} * \mu_{i,j}$$
+
+:::
+
+::::
+
+::: {style="font-size: 80%;"}
+**To consider:**
+
+- Time
+- Life processes
+- Habitat sensitivity
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+::: {style="text-align: center;"}
+![](img/calculator_1.svg){width=58%}
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+::: {style="text-align: center;"}
+![](img/calculator_2.svg){width=58%}
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+::: {style="text-align: center;"}
+![](img/calculator_3.svg){width=58%}
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+::: {style="text-align: center;"}
+![](img/calculator_4.svg){width=58%}
+:::
+
+---
+
+### Cumulative risk assessment framework
+
+::: {style="text-align: center;"}
+![](img/calculator_5.svg){width=58%}
+:::
+
+
+---
+
+### Cumulative risk assessment framework
+
+
+::: {style="font-size: 80%;"}
+**Anticipated benefits**
+
+- Flexible
+- Modular
+- Data quality (low / high)
+- Data type (binary / continuous / spatial)
+- Integration with cumulative effects framework
+- Spatially explicit assessment
+:::
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Stage-structured spatial foodwebs
+:::
+
+---
+
+### Stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw.svg){width=90%}
+:::
+
+---
+
+### Stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full.svg){width=90%}
+:::
+
+
+---
+
+### Stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full1.svg){width=90%}
+:::
+
+
+---
+
+### Stage-structured spatial foodwebs
+
+::: {style="text-align: center;"}
+![](img/concept_fw_full2.svg){width=90%}
+:::
+
+---
+
+### Stage-structured spatial foodwebs
+
+
+::: {style="font-size: 80%;"}
+**Anticipated benefits**
+
+- Integrating food webs to timing windows assessment
+- Understanding how disturbance spread to other:
+  - life stages 
+  - species
+- Improved assessment of timing windows at the scale of ecosystems
+
+:::
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+::: {data-background-color="#000000" style="text-align: center;"}
+# Thank you!
+:::
+
